@@ -1,4 +1,4 @@
-; Wed Apr 06 20:26:02 CEST 2016
+; Wed Apr 06 20:52:55 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -8,97 +8,57 @@
 
 ([Practica7_Class10000] of  Game_strategy_cat
 
-	(game_category Strategy)
-	(game_difficulty media)
+	(game_category "Strategy")
+	(game_difficulty "media")
 	(game_duration 50)
 	(game_name "Strategy_less_60")
 	(game_price 10.0)
-	(game_style cooperative))
+	(game_style "cooperative"))
 
 ([Practica7_Class10001] of  Game_strategy_cat
 
-	(game_category Strategy)
-	(game_difficulty media)
+	(game_category "Strategy")
+	(game_difficulty "media")
 	(game_duration 100)
 	(game_name "Strategy_more_60")
 	(game_price 20.0)
-	(game_style single_player))
+	(game_style "single_player"))
 
-([Practica7_Class10138] of  Location
-
-	(location_city "Tokyo")
-	(location_continent "Asia")
-	(location_country "Japan"))
-
-([Practica7_Class10139] of  Location
-
-	(location_city "NewYork")
-	(location_continent "America")
-	(location_country "USA"))
-
-([Practica7_Class10140] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10139])
-	(manufacturer_name "Cocktail_Games"))
-
-([Practica7_Class10141] of  Location
-
-	(location_city "Madrid")
-	(location_continent "Europe")
-	(location_country "Spain"))
-
-([Practica7_Class10142] of  Location
+([Practica7_Class10112] of  Location
 
 	(location_city "Tokyo")
 	(location_continent "Asia")
 	(location_country "Japan"))
 
-([Practica7_Class10143] of  Location
+([Practica7_Class10113] of  Location
 
 	(location_city "NewYork")
 	(location_continent "America")
 	(location_country "USA"))
 
-([Practica7_Class10144] of  Manufacturer
+([Practica7_Class10114] of  Manufacturer
 
-	(manufacturer_location [Practica7_Class10143])
-	(manufacturer_name "Cocktail_Games"))
+	(manufacturer_location [Practica7_Class10113])
+	(manufacturer_name "CocktailGames"))
 
-([Practica7_Class10145] of  Location
+([Practica7_Class10115] of  Game
 
-	(location_city "Madrid")
-	(location_continent "Europe")
-	(location_country "Spain"))
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10114])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
 
-([Practica7_Class10169] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10143])
-	(manufacturer_name "Cocktail_Games"))
-
-([Practica7_Class10170] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10139])
-	(manufacturer_name "Cocktail_Games"))
-
-([Practica7_Class10171] of  Location
-
-	(location_city "Tokyo")
-	(location_continent "Asia")
-	(location_country "Japan"))
-
-([Practica7_Class10172] of  Location
-
-	(location_city "NewYork")
-	(location_continent "America")
-	(location_country "USA"))
-
-([Practica7_Class10173] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10172])
-	(manufacturer_name "Cocktail_Games"))
-
-([Practica7_Class10174] of  Location
+([Practica7_Class10116] of  Location
 
 	(location_city "Madrid")
 	(location_continent "Europe")
 	(location_country "Spain"))
+
+([Practica7_Class10117] of  Designer
+
+	(designer_category Rol)
+	(designer_location [Practica7_Class10116])
+	(designer_name "Cliff Blezinsnky"))
