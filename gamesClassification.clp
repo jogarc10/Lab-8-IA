@@ -37,9 +37,9 @@
 
  
 (deffacts ini
-(Location (city Madrid)(continent Europe)(country Spain))
-(Location (city New_York)(continent America)(country USA))
-(Location (city Tokyo)(continent Asia)(country Japan))
+(Location (location_city Madrid)(location_continent Europe)(location_country Spain))
+(Location (location_city New_York)(location_continent America)(location_country USA))
+(Location (location_city Tokyo)(location_continent Asia)(location_country Japan))
 )
 
 (defrule locations
