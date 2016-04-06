@@ -1,26 +1,7 @@
 /* (batch "C:/hlocal/Lab-8-IA/gamesClassification.clp") */
-(clear)
 
-(mapclass Designer)
-(mapclass Game)
 (mapclass Location)
 (mapclass Manufacturer)
-(mapclass Store)
-
-(deftemplate Designer
- (slot designer_location)
- (slot designer_name)
- (slot designer_category))
-
-(deftemplate Game
-(slot game_category)
-(slot game_difficulty)
-(slot game_duration)
-(slot game_manufacturer)
-(slot game_name)
-(slot game_price)
-(slot game_stores)
-(slot game_style)) 
 
 (deftemplate Location
 (slot location_city)
@@ -30,11 +11,6 @@
 (deftemplate Manufacturer
 (slot manufacturer_city)
 (slot manufacturer_name))
-
-(deftemplate Store
-(slot store_games)
-(slot store_location)
-(slot store_name))
  	
 (deffacts ini
 (Location (location_city "Madrid")(location_continent "Europe")(location_country "Spain"))

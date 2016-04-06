@@ -1,4 +1,4 @@
-; Wed Apr 06 18:42:37 CEST 2016
+; Wed Apr 06 20:26:02 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -24,73 +24,80 @@
 	(game_price 20.0)
 	(game_style single_player))
 
-([Practica7_Class20127] of  Location
+([Practica7_Class10138] of  Location
 
 	(location_city "Tokyo")
 	(location_continent "Asia")
 	(location_country "Japan"))
 
-([Practica7_Class20128] of  Location
+([Practica7_Class10139] of  Location
 
-	(location_city "New_York")
+	(location_city "NewYork")
 	(location_continent "America")
 	(location_country "USA"))
 
-([Practica7_Class20129] of  Location
+([Practica7_Class10140] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class10139])
+	(manufacturer_name "Cocktail_Games"))
+
+([Practica7_Class10141] of  Location
 
 	(location_city "Madrid")
 	(location_continent "Europe")
 	(location_country "Spain"))
 
-([Practica7_Class20173] of  Location
+([Practica7_Class10142] of  Location
 
 	(location_city "Tokyo")
 	(location_continent "Asia")
 	(location_country "Japan"))
 
-([Practica7_Class20174] of  Location
+([Practica7_Class10143] of  Location
 
-	(location_city "New_York")
+	(location_city "NewYork")
 	(location_continent "America")
 	(location_country "USA"))
 
-([Practica7_Class20175] of  Location
+([Practica7_Class10144] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class10143])
+	(manufacturer_name "Cocktail_Games"))
+
+([Practica7_Class10145] of  Location
 
 	(location_city "Madrid")
 	(location_continent "Europe")
 	(location_country "Spain"))
 
-([Practica7_Class20213] of  Location
+([Practica7_Class10169] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class10143])
+	(manufacturer_name "Cocktail_Games"))
+
+([Practica7_Class10170] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class10139])
+	(manufacturer_name "Cocktail_Games"))
+
+([Practica7_Class10171] of  Location
 
 	(location_city "Tokyo")
 	(location_continent "Asia")
 	(location_country "Japan"))
 
-([Practica7_Class20214] of  Location
+([Practica7_Class10172] of  Location
 
-	(location_city "New_York")
+	(location_city "NewYork")
 	(location_continent "America")
 	(location_country "USA"))
 
-([Practica7_Class20215] of  Location
+([Practica7_Class10173] of  Manufacturer
 
-	(location_city "Madrid")
-	(location_continent "Europe")
-	(location_country "Spain"))
+	(manufacturer_location [Practica7_Class10172])
+	(manufacturer_name "Cocktail_Games"))
 
-([Practica7_Class20253] of  Location
-
-	(location_city "Tokyo")
-	(location_continent "Asia")
-	(location_country "Japan"))
-
-([Practica7_Class20254] of  Location
-
-	(location_city "New_York")
-	(location_continent "America")
-	(location_country "USA"))
-
-([Practica7_Class20255] of  Location
+([Practica7_Class10174] of  Location
 
 	(location_city "Madrid")
 	(location_continent "Europe")
