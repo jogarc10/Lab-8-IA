@@ -1,3 +1,5 @@
+(clear)
+
 (mapclass Designer)
 (mapclass Game)
 (mapclass Location)
@@ -20,9 +22,9 @@
  (slot style)) 
  
  (deftemplate Location
- (slot city)
- (slot continent)
- (slot country))
+ (slot location_city)
+ (slot location_continent)
+ (slot location_country))
  
  (deftemplate Manufacturer
  (slot location)
@@ -33,12 +35,18 @@
  (slot location)
  (slot name))
 
+ 
 (deffacts ini
-(Location (city Lugo)(continent Europe)(country Spain)))
+(Location (city Madrid)(continent Europe)(country Spain))
+(Location (city New_York)(continent America)(country USA))
+(Location (city Tokyo)(continent Asia)(country Japan))
+)
 
-
-
-
+(defrule locations
+	(Location (location_city ?city)(location_continent ?continent) (location_country ?country))
+	=>
+	(make-instance of Location (location_city ?city)(location_continent ?continent) (location_country ?country))
+)
 
 (reset)
 (run)

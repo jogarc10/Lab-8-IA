@@ -1,22 +1,10 @@
-; Tue Mar 29 10:44:16 CEST 2016
+; Wed Apr 06 17:55:20 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([Jess+engine] of  %3AJESS-ENGINE
 )
-
-([Practica7_Class0] of  Location
-
-	(City "Ohio")
-	(Continent "America")
-	(Country "United_States"))
-
-([Practica7_Class1] of  Location
-
-	(City "Madrid")
-	(Continent "Europe")
-	(Country "Spain"))
 
 ([Practica7_Class10000] of  Game_strategy_cat
 
@@ -36,47 +24,8 @@
 	(price 20.0)
 	(style single_player))
 
-([Practica7_Class10003] of  Game
-
-	(category Strategy)
-	(difficulty media)
-	(duration 10)
-	(manufacturer [Practica7_Class5])
-	(name "M or USA")
-	(price 21.0)
-	(Seller_stores [Practica7_Class4])
-	(style cooperative))
-
-([Practica7_Class10009] of  Designer
-
-	(Designer_location [Practica7_Class1])
-	(Designer_name "Roleros")
-	(made_category Rol))
-
-([Practica7_Class4] of  Store
-
-	(Store_games [Practica7_Class7])
-	(Store_location
-		[Practica7_Class0]
-		[Practica7_Class6])
-	(Store_name "Bazinga_shop"))
-
-([Practica7_Class5] of  Manufacturer
-
-	(Manufacturer_location [Practica7_Class6])
-	(Manufacturer_name Cocktail_Games))
-
 ([Practica7_Class6] of  Location
+)
 
-	(City "Madrid")
-	(Continent "Europe")
-	(Country "Spain"))
-
-([Practica7_Class7] of  Game
-
-	(category Adventure)
-	(difficulty media)
-	(duration 60)
-	(name "Puerto_Rico")
-	(price 20.0)
-	(style cooperative))
+([Practica7_Class7] of  Location
+)
