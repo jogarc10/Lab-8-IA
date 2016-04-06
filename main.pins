@@ -1,4 +1,4 @@
-; Wed Apr 06 18:24:50 CEST 2016
+; Wed Apr 06 18:42:37 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -37,6 +37,60 @@
 	(location_country "USA"))
 
 ([Practica7_Class20129] of  Location
+
+	(location_city "Madrid")
+	(location_continent "Europe")
+	(location_country "Spain"))
+
+([Practica7_Class20173] of  Location
+
+	(location_city "Tokyo")
+	(location_continent "Asia")
+	(location_country "Japan"))
+
+([Practica7_Class20174] of  Location
+
+	(location_city "New_York")
+	(location_continent "America")
+	(location_country "USA"))
+
+([Practica7_Class20175] of  Location
+
+	(location_city "Madrid")
+	(location_continent "Europe")
+	(location_country "Spain"))
+
+([Practica7_Class20213] of  Location
+
+	(location_city "Tokyo")
+	(location_continent "Asia")
+	(location_country "Japan"))
+
+([Practica7_Class20214] of  Location
+
+	(location_city "New_York")
+	(location_continent "America")
+	(location_country "USA"))
+
+([Practica7_Class20215] of  Location
+
+	(location_city "Madrid")
+	(location_continent "Europe")
+	(location_country "Spain"))
+
+([Practica7_Class20253] of  Location
+
+	(location_city "Tokyo")
+	(location_continent "Asia")
+	(location_country "Japan"))
+
+([Practica7_Class20254] of  Location
+
+	(location_city "New_York")
+	(location_continent "America")
+	(location_country "USA"))
+
+([Practica7_Class20255] of  Location
 
 	(location_city "Madrid")
 	(location_continent "Europe")
