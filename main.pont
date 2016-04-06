@@ -1,4 +1,4 @@
-; Wed Apr 06 17:55:20 CEST 2016
+; Wed Apr 06 18:24:50 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,53 +7,44 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(multislot made_category
-		(type SYMBOL)
-		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
-		(create-accessor read-write))
-	(multislot Store_games
-		(type INSTANCE)
-;+		(allowed-classes Game)
-		(create-accessor read-write))
-	(multislot Designer_location
-		(type INSTANCE)
-;+		(allowed-classes Location)
-		(cardinality 1 ?VARIABLE)
+	(single-slot location_city
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Name
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot price
-		(type FLOAT)
-		(range 0.0 %3FVARIABLE)
+	(single-slot game_style
+		(type SYMBOL)
+		(allowed-values cooperative single_player)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Store_name
-		(type STRING)
-;+		(cardinality 1 1)
+	(multislot store_location
+		(type INSTANCE)
+;+		(allowed-classes Location)
 		(create-accessor read-write))
-	(single-slot Designer_name
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot manufacturer
+	(single-slot game_manufacturer
 		(type INSTANCE)
 ;+		(allowed-classes Manufacturer)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Continent
+	(single-slot designer_name
 		(type STRING)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot store_games
+		(type INSTANCE)
+;+		(allowed-classes Game)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION-NAME
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot style
-		(type SYMBOL)
-		(allowed-values cooperative single_player)
-;+		(cardinality 1 1)
+	(multislot designer_location
+		(type INSTANCE)
+;+		(allowed-classes Location)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot %3AKB-SAVE
 		(type SYMBOL)
@@ -61,9 +52,10 @@
 		(default FALSE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot Store_location
-		(type INSTANCE)
-;+		(allowed-classes Location)
+	(single-slot game_difficulty
+		(type SYMBOL)
+		(allowed-values alta media baja)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3ASTARTUP-FILE
 		(type STRING)
@@ -73,12 +65,7 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot difficulty
-		(type SYMBOL)
-		(allowed-values medium easy hard)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot City
+	(single-slot game_name
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -86,57 +73,70 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Manufacturer_name
-		(type SYMBOL)
-		(allowed-values Cocktail_Games Holocubierta)
+	(single-slot location_country
+		(type STRING)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot designer_category
+		(type SYMBOL)
+		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
 		(create-accessor read-write))
 	(single-slot Practica7_Class24
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot duration
-		(type INTEGER)
-;+		(cardinality 1 1)
+	(multislot manufacturer_location
+		(type INSTANCE)
+;+		(allowed-classes Location)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Practica7_Class25
 		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Seller_stores
-		(type INSTANCE)
-;+		(allowed-classes Store)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot store_name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_category
+		(type SYMBOL)
+		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot game_duration
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot Practica7_Class10008
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Country
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot category
+	(single-slot manufacturer_name
 		(type SYMBOL)
-		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
-;+		(cardinality 0 1)
+		(allowed-values Cocktail_Games Holocubierta)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_price
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot location_continent
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Developper_name
 		(type SYMBOL)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot Manufacturer_location
+	(single-slot game_stores
 		(type INSTANCE)
-;+		(allowed-classes Location)
-		(cardinality 1 ?VARIABLE)
+;+		(allowed-classes Store)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass %3AJESS-ENGINE
@@ -242,42 +242,42 @@
 (defclass Game
 	(is-a USER)
 	(role concrete)
-	(single-slot difficulty
-		(type SYMBOL)
-		(allowed-values medium easy hard)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot style
-		(type SYMBOL)
-		(allowed-values cooperative single_player)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot price
+	(single-slot game_price
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot duration
-		(type INTEGER)
+	(single-slot game_style
+		(type SYMBOL)
+		(allowed-values cooperative single_player)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot category
+	(single-slot game_name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_difficulty
+		(type SYMBOL)
+		(allowed-values alta media baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_category
 		(type SYMBOL)
 		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Seller_stores
-		(type INSTANCE)
-;+		(allowed-classes Store)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot manufacturer
+	(single-slot game_manufacturer
 		(type INSTANCE)
 ;+		(allowed-classes Manufacturer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot game_duration
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_stores
+		(type INSTANCE)
+;+		(allowed-classes Store)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -408,12 +408,12 @@
 (defclass Manufacturer
 	(is-a USER)
 	(role concrete)
-	(single-slot Manufacturer_name
+	(single-slot manufacturer_name
 		(type SYMBOL)
 		(allowed-values Cocktail_Games Holocubierta)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot Manufacturer_location
+	(multislot manufacturer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
@@ -422,32 +422,32 @@
 (defclass Designer
 	(is-a USER)
 	(role concrete)
-	(multislot made_category
+	(multislot designer_category
 		(type SYMBOL)
 		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
 		(create-accessor read-write))
-	(multislot Designer_location
+	(single-slot designer_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot designer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot Designer_name
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Location
 	(is-a USER)
 	(role concrete)
-	(single-slot Continent
+	(single-slot location_city
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot City
+	(single-slot location_continent
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Country
+	(single-slot location_country
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
@@ -455,15 +455,15 @@
 (defclass Store
 	(is-a USER)
 	(role concrete)
-	(multislot Store_games
-		(type INSTANCE)
-;+		(allowed-classes Game)
+	(single-slot store_name
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot Store_location
+	(multislot store_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(create-accessor read-write))
-	(single-slot Store_name
-		(type STRING)
-;+		(cardinality 1 1)
+	(multislot store_games
+		(type INSTANCE)
+;+		(allowed-classes Game)
 		(create-accessor read-write)))

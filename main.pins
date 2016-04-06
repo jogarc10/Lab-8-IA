@@ -1,4 +1,4 @@
-; Wed Apr 06 17:55:20 CEST 2016
+; Wed Apr 06 18:24:50 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -8,24 +8,36 @@
 
 ([Practica7_Class10000] of  Game_strategy_cat
 
-	(category Strategy)
-	(difficulty media)
-	(duration 50)
-	(name "Strategy_less_60")
-	(price 10.0)
-	(style cooperative))
+	(game_category Strategy)
+	(game_difficulty media)
+	(game_duration 50)
+	(game_name "Strategy_less_60")
+	(game_price 10.0)
+	(game_style cooperative))
 
 ([Practica7_Class10001] of  Game_strategy_cat
 
-	(category Strategy)
-	(difficulty media)
-	(duration 100)
-	(name "Strategy_more_60")
-	(price 20.0)
-	(style single_player))
+	(game_category Strategy)
+	(game_difficulty media)
+	(game_duration 100)
+	(game_name "Strategy_more_60")
+	(game_price 20.0)
+	(game_style single_player))
 
-([Practica7_Class6] of  Location
-)
+([Practica7_Class20127] of  Location
 
-([Practica7_Class7] of  Location
-)
+	(location_city "Tokyo")
+	(location_continent "Asia")
+	(location_country "Japan"))
+
+([Practica7_Class20128] of  Location
+
+	(location_city "New_York")
+	(location_continent "America")
+	(location_country "USA"))
+
+([Practica7_Class20129] of  Location
+
+	(location_city "Madrid")
+	(location_continent "Europe")
+	(location_country "Spain"))

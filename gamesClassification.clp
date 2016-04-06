@@ -7,19 +7,19 @@
 (mapclass Store)
 
 (deftemplate Designer
- (slot location)
- (slot name)
- (slot category))
+ (slot designer_location)
+ (slot designer_name)
+ (slot designer_category))
  
  (deftemplate Game
- (slot category)
- (slot difficulty)
- (slot duration)
- (slot manufacturer)
- (slot name)
- (slot price)
- (slot seller_store)
- (slot style)) 
+ (slot game_category)
+ (slot game_difficulty)
+ (slot game_duration)
+ (slot game_manufacturer)
+ (slot game_name)
+ (slot game_price)
+ (slot game_stores)
+ (slot game_style)) 
  
  (deftemplate Location
  (slot location_city)
@@ -27,13 +27,13 @@
  (slot location_country))
  
  (deftemplate Manufacturer
- (slot location)
- (slot name))
+ (slot manufacturer_location)
+ (slot manufacturer_name))
  
  (deftemplate Store
- (slot games)
- (slot location)
- (slot name))
+ (slot store_games)
+ (slot store_location)
+ (slot store_name))
 
  
 (deffacts ini
