@@ -187,6 +187,7 @@
 )
 
 /*** Classification by difficulty ***/
+
 (defrule games_easy
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
 	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
@@ -211,7 +212,7 @@
 	(make-instance of Game_hard_diff (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-/*Classification by duration*/
+/*** Classification by duration ***/
 
 (defrule games_short
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -237,8 +238,7 @@
 	(make-instance of Game_long_duration (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-/*Classification by price
-*/
+/*** Classification by price ***/
 
 (defrule games_less_10
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -288,15 +288,7 @@
 	(make-instance of Game_more_50_price (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-/*Classification by category
-*/
-
-- "adventure"
-- "sports" 
-- "puzzle"
-- "family"
-- "rol"
-- "strategy"
+/*** Classification by category ***/
 
 (defrule games_adventure
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
