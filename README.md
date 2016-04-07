@@ -1,5 +1,8 @@
 # Lab-8-IA
 
+## How to run
+(batch "C:/hlocal/Lab-8-IA/gamesClassification.clp")
+
 ## Allowed values in our Slots
 ### Game category
 

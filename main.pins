@@ -1,4 +1,4 @@
-; Thu Apr 07 10:58:03 CEST 2016
+; Thu Apr 07 11:11:14 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,37 +6,15 @@
 ([Jess+engine] of  %3AJESS-ENGINE
 )
 
-([Practica7_Class10030] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10383])
-	(manufacturer_name "RedBricksStudio"))
-
-([Practica7_Class10031] of  Game_10_to_14_age
-
-	(game_age 13)
-	(game_category "Family")
-	(game_difficulty "easy")
-	(game_duration 90)
-	(game_manufacturer [Practica7_Class10030])
-	(game_name "Wolf")
-	(game_price 10.0)
-	(game_style "cooperative"))
-
 ([Practica7_Class10032] of  Game_cooperative_style
 
 	(game_age 13)
 	(game_category "Family")
 	(game_difficulty "easy")
 	(game_duration 90)
-	(game_manufacturer [Practica7_Class10030])
 	(game_name "Wolf")
 	(game_price 10.0)
 	(game_style "cooperative"))
-
-([Practica7_Class10033] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10383])
-	(manufacturer_name "CocktailGames"))
 
 ([Practica7_Class10034] of  Game_single_player_style
 
@@ -44,32 +22,9 @@
 	(game_category "Adventure")
 	(game_difficulty "hard")
 	(game_duration 60)
-	(game_manufacturer [Practica7_Class10033])
 	(game_name "Go Game")
 	(game_price 20.0)
 	(game_style "single"))
-
-([Practica7_Class10035] of  Game_less_10_age
-
-	(game_age 9)
-	(game_category "Adventure")
-	(game_difficulty "hard")
-	(game_duration 60)
-	(game_manufacturer [Practica7_Class10033])
-	(game_name "Go Game")
-	(game_price 20.0)
-	(game_style "single"))
-
-([Practica7_Class10036] of  Game_10_to_14_age
-
-	(game_age 13)
-	(game_category "Family")
-	(game_difficulty "easy")
-	(game_duration 90)
-	(game_manufacturer [Practica7_Class10384])
-	(game_name "Wolf")
-	(game_price 10.0)
-	(game_style "cooperative"))
 
 ([Practica7_Class10037] of  Game_cooperative_style
 
@@ -77,21 +32,9 @@
 	(game_category "Family")
 	(game_difficulty "easy")
 	(game_duration 90)
-	(game_manufacturer [Practica7_Class10384])
 	(game_name "Wolf")
 	(game_price 10.0)
 	(game_style "cooperative"))
-
-([Practica7_Class10038] of  Game_less_10_age
-
-	(game_age 9)
-	(game_category "Adventure")
-	(game_difficulty "hard")
-	(game_duration 60)
-	(game_manufacturer [Practica7_Class10387])
-	(game_name "Go Game")
-	(game_price 20.0)
-	(game_style "single"))
 
 ([Practica7_Class10039] of  Game_single_player_style
 
@@ -99,44 +42,9 @@
 	(game_category "Adventure")
 	(game_difficulty "hard")
 	(game_duration 60)
-	(game_manufacturer [Practica7_Class10387])
 	(game_name "Go Game")
 	(game_price 20.0)
 	(game_style "single"))
-
-([Practica7_Class10040] of  Designer
-
-	(designer_category Rol)
-	(designer_location [Practica7_Class10389])
-	(designer_name "Cliff Blezinsnky"))
-
-([Practica7_Class10041] of  Location
-
-	(location_city "Tokyo")
-	(location_continent "Asia")
-	(location_country "Japan"))
-
-([Practica7_Class10042] of  Location
-
-	(location_city "NewYork")
-	(location_continent "America")
-	(location_country "USA"))
-
-([Practica7_Class10043] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10042])
-	(manufacturer_name "RedBricksStudio"))
-
-([Practica7_Class10044] of  Game_10_to_14_age
-
-	(game_age 13)
-	(game_category "Family")
-	(game_difficulty "easy")
-	(game_duration 90)
-	(game_manufacturer [Practica7_Class10043])
-	(game_name "Wolf")
-	(game_price 10.0)
-	(game_style "cooperative"))
 
 ([Practica7_Class10045] of  Game_cooperative_style
 
@@ -144,15 +52,9 @@
 	(game_category "Family")
 	(game_difficulty "easy")
 	(game_duration 90)
-	(game_manufacturer [Practica7_Class10043])
 	(game_name "Wolf")
 	(game_price 10.0)
 	(game_style "cooperative"))
-
-([Practica7_Class10046] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10042])
-	(manufacturer_name "CocktailGames"))
 
 ([Practica7_Class10047] of  Game_single_player_style
 
@@ -160,33 +62,688 @@
 	(game_category "Adventure")
 	(game_difficulty "hard")
 	(game_duration 60)
-	(game_manufacturer [Practica7_Class10046])
 	(game_name "Go Game")
 	(game_price 20.0)
 	(game_style "single"))
 
-([Practica7_Class10048] of  Game_less_10_age
+([Practica7_Class10083] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10084] of  Game_single_player_style
 
 	(game_age 9)
 	(game_category "Adventure")
 	(game_difficulty "hard")
 	(game_duration 60)
-	(game_manufacturer [Practica7_Class10046])
 	(game_name "Go Game")
 	(game_price 20.0)
 	(game_style "single"))
 
-([Practica7_Class10049] of  Location
+([Practica7_Class10086] of  Game_single_player_style
 
-	(location_city "Madrid")
-	(location_continent "Europe")
-	(location_country "Spain"))
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
 
-([Practica7_Class10050] of  Designer
+([Practica7_Class10089] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10091] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10093] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10096] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10098] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10100] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10103] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10141] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10143] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10145] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10147] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10150] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10152] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10155] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10156] of  Manufacturer
+
+	(manufacturer_name "CocktailGames"))
+
+([Practica7_Class10157] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10159] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10161] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10163] of  Designer
 
 	(designer_category Rol)
-	(designer_location [Practica7_Class10049])
 	(designer_name "Cliff Blezinsnky"))
+
+([Practica7_Class10166] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10168] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10171] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10172] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10175] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10177] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10179] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10182] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10216] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10218] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10222] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10224] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10225] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10228] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10229] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10231] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10234] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10236] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10237] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10239] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10242] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10245] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10248] of  Location
+
+	(location_city "NewYork")
+	(location_continent "America")
+	(location_country "USA"))
+
+([Practica7_Class10250] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10253] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10287] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10289] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10293] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10295] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10297] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10300] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10302] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10304] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10307] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10310] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10312] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10314] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10315] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10317] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10319] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10322] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10324] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10325] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10329] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10331] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class10337] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class10339] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
 
 ([Practica7_Class10347] of  Game_cooperative_style
 
@@ -198,69 +755,544 @@
 	(game_price 10.0)
 	(game_style "cooperative"))
 
-([Practica7_Class10382] of  Location
-
-	(location_city "Tokyo")
-	(location_continent "Asia")
-	(location_country "Japan"))
-
-([Practica7_Class10383] of  Location
-
-	(location_city "NewYork")
-	(location_continent "America")
-	(location_country "USA"))
-
-([Practica7_Class10384] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10383])
-	(manufacturer_name "RedBricksStudio"))
-
-([Practica7_Class10385] of  Game_10_to_14_age
-
-	(game_age 13)
-	(game_category "Family")
-	(game_difficulty "easy")
-	(game_duration 90)
-	(game_manufacturer [Practica7_Class10384])
-	(game_name "Wolf")
-	(game_price 10.0)
-	(game_style "cooperative"))
-
 ([Practica7_Class10386] of  Game_cooperative_style
 
 	(game_age 13)
 	(game_category "Family")
 	(game_difficulty "easy")
 	(game_duration 90)
-	(game_manufacturer [Practica7_Class10384])
 	(game_name "Wolf")
 	(game_price 10.0)
 	(game_style "cooperative"))
 
-([Practica7_Class10387] of  Manufacturer
-
-	(manufacturer_location [Practica7_Class10383])
-	(manufacturer_name "CocktailGames"))
-
-([Practica7_Class10388] of  Game_less_10_age
+([Practica7_Class20375] of  Game_single_player_style
 
 	(game_age 9)
 	(game_category "Adventure")
 	(game_difficulty "hard")
 	(game_duration 60)
-	(game_manufacturer [Practica7_Class10387])
 	(game_name "Go Game")
 	(game_price 20.0)
 	(game_style "single"))
 
-([Practica7_Class10389] of  Location
+([Practica7_Class20377] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20378] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20381] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20382] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20385] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20386] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20389] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20390] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20393] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20395] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20398] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20401] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20402] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20404] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20406] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20408] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20410] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20412] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20415] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20418] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20420] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20421] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20423] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20426] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20427] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20430] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20499] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20501] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20503] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20506] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20508] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20511] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20512] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20515] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20516] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20518] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20521] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20522] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20525] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20527] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20529] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20531] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20533] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20534] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20538] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20540] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20580] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20583] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20584] of  Location
+
+	(location_city "Tokyo")
+	(location_continent "Asia")
+	(location_country "Japan"))
+
+([Practica7_Class20621] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class10248])
+	(manufacturer_name "RedBricksStudio"))
+
+([Practica7_Class20622] of  Game_cooperative_style
+
+	(game_age 13)
+	(game_category "Family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class20621])
+	(game_name "Wolf")
+	(game_price 10.0)
+	(game_style "cooperative"))
+
+([Practica7_Class20626] of  Game_single_player_style
+
+	(game_age 9)
+	(game_category "Adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class10156])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class20630] of  Location
 
 	(location_city "Madrid")
 	(location_continent "Europe")
 	(location_country "Spain"))
-
-([Practica7_Class10390] of  Designer
-
-	(designer_category Rol)
-	(designer_location [Practica7_Class10389])
-	(designer_name "Cliff Blezinsnky"))

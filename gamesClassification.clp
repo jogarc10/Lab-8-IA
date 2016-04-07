@@ -8,35 +8,38 @@
 (mapclass Store)
 
 (deftemplate Designer
- (slot designer_location)
- (slot designer_name)
- (slot designer_category))
-
-/* Adventure, sports, puzzle, family, rol, strategy*/
+	(slot designer_location)
+	(slot designer_name)
+	(slot designer_category)
+ )
 
 (deftemplate Game
-(slot game_age)
-(slot game_category)
-(slot game_difficulty)
-(slot game_duration)
-(slot game_manufacturer)
-(slot game_name)
-(slot game_price)
-(slot game_style)) 
+	(slot game_age)
+	(slot game_category)
+	(slot game_difficulty)
+	(slot game_duration)
+	(slot game_manufacturer)
+	(slot game_name)
+	(slot game_price)
+	(slot game_style)
+) 
 
 (deftemplate Location
-(slot location_city)
-(slot location_continent)
-(slot location_country))
+	(slot location_city)
+	(slot location_continent)
+	(slot location_country)
+)
 
 (deftemplate Manufacturer
-(slot manufacturer_city)
-(slot manufacturer_name))
+	(slot manufacturer_city)
+	(slot manufacturer_name)
+)
 
 (deftemplate Store
-(slot store_games)
-(slot store_location)
-(slot store_name))
+	(slot store_games)
+	(slot store_location)
+	(slot store_name)
+)
  	
 (deffacts ini
 	(Location (location_city "Madrid")(location_continent "Europe")(location_country "Spain"))
@@ -138,18 +141,65 @@
 /*********************************************/
 
 (defrule remove_if_duplicate_name_and_age
- (object (is-a Person)
- (OBJECT ?p)
- (name ?n)
- (age ?a))
- (object (is-a Person)
- (OBJECT ~?p)
- (name ?n)
- (age ?a))
-=>
- (unmake-instance ?p)
-) 
+	(object (is-a Location)
+		(OBJECT ?p)
+		(location_city ?city)
+		(location_continent ?continent)
+		(location_country ?country)
+	)
+	(object (is-a Location)
+		(OBJECT ~?p)
+		(location_city ?city)
+		(location_continent ?continent)
+		(location_country ?country)
+	)
+	=>
+	(unmake-instance ?p)
+)
 
+(defrule remove_if_duplicate_manufacturer
+	(object (is-a Manufacturer)
+		(OBJECT ?p)
+		(manufacturer_name ?name)
+	)
+	(object (is-a Manufacturer)
+		(OBJECT ~?p)
+		(manufacturer_name ?name)
+	)
+	=>
+	(unmake-instance ?p)
+)
+
+(defrule remove_if_duplicate_designer
+	(object (is-a Designer)
+		(OBJECT ?p)
+		(designer_name ?name)
+	)
+	(object (is-a Designer)
+		(OBJECT ~?p)
+		(designer_name ?name)
+	)
+	=>
+	(unmake-instance ?p)
+)
+
+
+
+/*
+
+(defrule remove_if_duplicate_game
+	(object (is-a Game)
+		(OBJECT ?p)
+		(game_name ?name)
+	)
+	(object (is-a Location)
+		(OBJECT ~?p)
+		(game_name ?name)
+	)
+	=>
+	(unmake-instance ?p)
+)
+*/
 
 (reset)
 (run)
