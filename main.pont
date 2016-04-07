@@ -1,4 +1,4 @@
-; Wed Apr 06 20:52:55 CEST 2016
+; Thu Apr 07 10:58:03 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -13,6 +13,10 @@
 		(create-accessor read-write))
 	(single-slot Name
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot game_age
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot game_style
@@ -267,15 +271,15 @@
 	(single-slot game_duration
 		(type INTEGER)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_age
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Game_by_age
 	(is-a Game)
 	(role abstract))
-
-(defclass Game_all_publics_age
-	(is-a Game_by_age)
-	(role concrete))
 
 (defclass Game_less_10_age
 	(is-a Game_by_age)

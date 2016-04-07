@@ -1,4 +1,4 @@
-; Wed Apr 06 20:52:55 CEST 2016
+; Thu Apr 07 10:58:04 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,17 +20,17 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Practica7_ProjectKB_Class10090]
-		[Practica7_ProjectKB_Class10091]
-		[Practica7_ProjectKB_Class10092]
-		[Practica7_ProjectKB_Class10093]
-		[Practica7_ProjectKB_Class10094]
-		[Practica7_ProjectKB_Class10095]
-		[Practica7_ProjectKB_Class10096]
-		[Practica7_ProjectKB_Class10097]
-		[Practica7_ProjectKB_Class10098]
-		[Practica7_ProjectKB_Class10099]
-		[Practica7_ProjectKB_Class10100]))
+		[Practica7_ProjectKB_Class10004]
+		[Practica7_ProjectKB_Class10005]
+		[Practica7_ProjectKB_Class10006]
+		[Practica7_ProjectKB_Class10007]
+		[Practica7_ProjectKB_Class10008]
+		[Practica7_ProjectKB_Class10009]
+		[Practica7_ProjectKB_Class10010]
+		[Practica7_ProjectKB_Class10011]
+		[Practica7_ProjectKB_Class10012]
+		[Practica7_ProjectKB_Class10013]
+		[Practica7_ProjectKB_Class10014]))
 
 ([CLSES_TAB] of  Widget
 
@@ -74,9 +74,6 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_592807_Class3] of  Map
-)
-
 ([KB_724723_Class0] of  String
 
 	(name "factory_class_name")
@@ -85,9 +82,9 @@
 ([KB_724723_Class1] of  Map
 
 	(entries
-		[Practica7_ProjectKB_Class20101]
-		[Practica7_ProjectKB_Class20102]
-		[Practica7_ProjectKB_Class20103]))
+		[Practica7_ProjectKB_Class10015]
+		[Practica7_ProjectKB_Class10016]
+		[Practica7_ProjectKB_Class10017]))
 
 ([KB_724723_Class100] of  String
 
@@ -181,6 +178,9 @@
 	(name "classes_file_name")
 	(string_value "main.pont"))
 
+([KB_902777_Class3] of  Map
+)
+
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -273,134 +273,86 @@
 
 	(name "layout properties"))
 
-([Practica7_ProjectKB_Class10009] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "game_style")
-	(property_list [Practica7_ProjectKB_Class10010])
-	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 200)
-	(y 0))
-
-([Practica7_ProjectKB_Class10010] of  Property_List
-)
-
-([Practica7_ProjectKB_Class10013] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "game_difficulty")
-	(property_list [Practica7_ProjectKB_Class10014])
-	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 100)
-	(y 120))
-
-([Practica7_ProjectKB_Class10014] of  Property_List
-)
-
-([Practica7_ProjectKB_Class10015] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "game_category")
-	(property_list [Practica7_ProjectKB_Class10016])
-	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 0)
-	(y 120))
-
-([Practica7_ProjectKB_Class10016] of  Property_List
-)
-
-([Practica7_ProjectKB_Class10023] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "game_stores")
-	(property_list [Practica7_ProjectKB_Class10024])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 200)
-	(y 120))
-
-([Practica7_ProjectKB_Class10024] of  Property_List
-
-	(properties
-		[Practica7_ProjectKB_Class10025]
-		[Practica7_ProjectKB_Class10026]))
-
-([Practica7_ProjectKB_Class10025] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([Practica7_ProjectKB_Class10026] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([Practica7_ProjectKB_Class10090] of  String
+([Practica7_ProjectKB_Class10004] of  String
 
 	(name "Location")
 	(string_value "location_city"))
 
-([Practica7_ProjectKB_Class10091] of  String
+([Practica7_ProjectKB_Class10005] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Practica7_ProjectKB_Class10092] of  String
+([Practica7_ProjectKB_Class10006] of  String
 
 	(name "Game")
 	(string_value "game_name"))
 
-([Practica7_ProjectKB_Class10093] of  String
+([Practica7_ProjectKB_Class10007] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class10094] of  String
+([Practica7_ProjectKB_Class10008] of  String
 
 	(name ":FUNCTION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class10095] of  String
+([Practica7_ProjectKB_Class10009] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([Practica7_ProjectKB_Class10096] of  String
+([Practica7_ProjectKB_Class10010] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Practica7_ProjectKB_Class10097] of  String
+([Practica7_ProjectKB_Class10011] of  String
 
 	(name "Manufacturer")
 	(string_value "manufacturer_name"))
 
-([Practica7_ProjectKB_Class10098] of  String
+([Practica7_ProjectKB_Class10012] of  String
 
 	(name "Store")
 	(string_value "store_name"))
 
-([Practica7_ProjectKB_Class10099] of  String
+([Practica7_ProjectKB_Class10013] of  String
 
 	(name ":JESS-DEFINITION")
 	(string_value "%3ADEFINITION-NAME"))
+
+([Practica7_ProjectKB_Class10014] of  String
+
+	(name "Designer")
+	(string_value "designer_name"))
+
+([Practica7_ProjectKB_Class10015] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([Practica7_ProjectKB_Class10016] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([Practica7_ProjectKB_Class10017] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([Practica7_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query")
 	(string_value "Query Name: 1-Strategy games with less than one hour\nMatch All:true\nLength: 1\nGame_strategy_cat	 	is less than	Other:60	1	\n\nQuery Name: 2-Less 50; Hard, Short and Coop\nMatch All:true\nLength: 4\nGame_less_50_price	 	Other:	null	\nGame_hard_diff	 	Other:	null	\nGame_cooperative_style	 	Other:	null	\nGame_short_duration	 	Other:	null	\n\nQuery Name: 4-European designers that made rol games\nMatch All:true\nLength: 2\nDesigner	 	is	Other:Rol	1	\nDesigner	 	contains	Other:Europe-Location	1	\n\nQuery Name: 5-Shops that sold Puerto Rico\nMatch All:true\nLength: 1\nStore	 	contains	Other:SimpleInstance(Practica7_Class7 of [])	1	\n\nQuery Name: 6-Rol games for kids between 10 and 14 years\nMatch All:true\nLength: 2\nGame_rol_cat	 	Other:	null	\nGame_10_to_14_age	 	Other:	null	\n\nQuery Name: Europe-Location\nMatch All:true\nLength: 1\nLocation	 	is	Other:Europe	1	\n\nQuery Name: Stores in europe\nMatch All:true\nLength: 1\nStore	 	contains	Other:Europe-Location	1	\n\nQuery Name: 3-Cocktail Games in Madrid or United States\nMatch All:true\nLength: 2\nGame	 	contains	Other:SimpleInstance(Practica7_Class5 of [])	1	\nGame	 	contains	Other:Stores in europe	1	\n\n"))
-
-([Practica7_ProjectKB_Class10100] of  String
-
-	(name "Designer")
-	(string_value "designer_name"))
 
 ([Practica7_ProjectKB_Class10101] of  Widget
 
@@ -973,27 +925,6 @@
 
 ([Practica7_ProjectKB_Class20] of  Property_List
 )
-
-([Practica7_ProjectKB_Class20101] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([Practica7_ProjectKB_Class20102] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([Practica7_ProjectKB_Class20103] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
 
 ([Practica7_ProjectKB_Class21] of  Widget
 
