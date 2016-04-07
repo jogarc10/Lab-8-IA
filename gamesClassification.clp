@@ -42,15 +42,66 @@
 )
  	
 (deffacts ini
-	(Location (location_city "Madrid")(location_continent "Europe")(location_country "Spain"))
-	(Location (location_city "NewYork")(location_continent "America")(location_country "USA"))
-	(Location (location_city "Tokyo")(location_continent "Asia")(location_country "Japan"))
-	(Manufacturer (manufacturer_city "NewYork") (manufacturer_name "CocktailGames"))
-	(Manufacturer (manufacturer_city "NewYork") (manufacturer_name "RedBricksStudio"))
-	(Designer (designer_location "Madrid") (designer_name "Cliff Blezinsnky") (designer_category "Rol"))
+
+	; Locations facts
+	
+	(Location 
+		(location_city "Madrid")
+		(location_continent "Europe")
+		(location_country "Spain")
+	)
+	(Location 
+		(location_city "NewYork")
+		(location_continent "America")
+		(location_country "USA")
+	)
+	(Location 
+		(location_city "Tokyo")
+		(location_continent "Asia")
+		(location_country "Japan")
+	)
+	
+	; Manufacturers facts
+	
+	(Manufacturer
+		(manufacturer_city "NewYork")
+		(manufacturer_name "CocktailGames")
+	)
+	(Manufacturer 
+		(manufacturer_city "NewYork")
+		(manufacturer_name "RedBricksStudio")
+	)
+	
+	; Designer facts
+	
+	(Designer 
+		(designer_location "Madrid")
+		(designer_name "Cliff Blezinsnky")
+		(designer_category "Rol")
+	)
+	
+	; Game facts
  
-	(Game (game_age 9) (game_category "Adventure") (game_difficulty "hard") (game_duration 60) (game_manufacturer "CocktailGames") (game_name "Go Game") (game_price 20.0) (game_style "single"))
-	(Game (game_age 13) (game_category "Family") (game_difficulty "easy") (game_duration 90) (game_manufacturer "RedBricksStudio") (game_name "Wolf") (game_price 10.0) (game_style "cooperative"))
+	(Game
+		(game_age 9)
+		(game_category "Adventure")
+		(game_difficulty "hard")
+		(game_duration 60)
+		(game_manufacturer "CocktailGames")
+		(game_name "Go Game")
+		(game_price 20.0)
+		(game_style "single")
+	)
+	(Game
+		(game_age 13)
+		(game_category "Family")
+		(game_difficulty "easy")
+		(game_duration 90)
+		(game_manufacturer "RedBricksStudio")
+		(game_name "Wolf")
+		(game_price 10.0)
+		(game_style "cooperative")
+	)
 )
 
 (defrule locations
@@ -117,7 +168,7 @@
 )
 
 
-/*Classification by style*/
+/*** Classification by style ***/
 
 (defrule games_single_player
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -135,7 +186,7 @@
 	(make-instance of Game_cooperative_style (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-/*Classification by difficulty*/
+/*** Classification by difficulty ***/
 (defrule games_easy
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
 	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
@@ -186,7 +237,6 @@
 	(make-instance of Game_long_duration (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-
 /*********************************************/
 /******** Remove duplicates instances ********/
 /*********************************************/
@@ -234,29 +284,6 @@
 	(unmake-instance ?p)
 )
 
-
-
-/*
-
-(defrule remove_if_duplicate_game
-	(object (is-a Game)
-		(OBJECT ?p)
-		(game_name ?name)
-	)
-	(object (is-a Location)
-		(OBJECT ~?p)
-		(game_name ?name)
-	)
-	=>
-	(unmake-instance ?p)
-)
-*/
-
 (reset)
 (run)
-(facts) 
-
-(deftemplate Designer
- (slot designer_location)
- (slot designer_name)
- (slot designer_category))
+(facts)
