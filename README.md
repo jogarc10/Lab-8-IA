@@ -21,6 +21,17 @@
 *Slot name:* game_difficulty<br />
 *Warning:* All these symbols must be included with double quotes (`"`)
 
-- "hard"
-- "medium"
 - "easy"
+- "normal"
+- "hard"
+
+
+
+### Game Duration
+
+*Slot name:* game_duration<br />
+*Warning:* All these symbols must be included with double quotes (`"`)
+
+- 0 < X <= 60 (short_duration)
+- 60 < X <= 120 (medium_duration)
+- 120 < X (long_duration)
