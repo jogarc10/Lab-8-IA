@@ -9,7 +9,7 @@
 *Slot name:* game_category<br />
 *Warning:* All these symbols must be included with double quotes (`"`)
 
-- "Adventure"
+- "adventure"
 - "sports" 
 - "puzzle"
 - "family"

@@ -84,7 +84,7 @@
  
 	(Game
 		(game_age 9)
-		(game_category "Adventure")
+		(game_category "adventure")
 		(game_difficulty "hard")
 		(game_duration 60)
 		(game_manufacturer "CocktailGames")
@@ -94,12 +94,12 @@
 	)
 	(Game
 		(game_age 13)
-		(game_category "Family")
+		(game_category "family")
 		(game_difficulty "easy")
 		(game_duration 90)
 		(game_manufacturer "RedBricksStudio")
 		(game_name "Wolf")
-		(game_price 10.0)
+		(game_price 40.0)
 		(game_style "cooperative")
 	)
 )
@@ -236,6 +236,116 @@
 	=>
 	(make-instance of Game_long_duration (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
+
+/*Classification by price
+*/
+
+(defrule games_less_10
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (< ?price 10.0))
+	=>
+	(make-instance of Game_less_10_price (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_less_20
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (and(>= ?price 10.0)(< ?price 20.0)))
+	=>
+	(make-instance of Game_less_20_price (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_less_30
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (and(>= ?price 20.0)(< ?price 30.0)))
+	=>
+	(make-instance of Game_less_30_price (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_less_40
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (and(>= ?price 30.0)(< ?price 40.0)))
+	=>
+	(make-instance of Game_less_40_price (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_less_50
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (and(>= ?price 40.0)(< ?price 50.0)))
+	=>
+	(make-instance of Game_medium_duration (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_more_50
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (>= ?price 60.0))
+	=>
+	(make-instance of Game_more_50_price (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+/*Classification by category
+*/
+
+- "adventure"
+- "sports" 
+- "puzzle"
+- "family"
+- "rol"
+- "strategy"
+
+(defrule games_adventure
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (eq ?category "adventure"))
+	=>
+	(make-instance of Game_adventure_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_sports
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (eq ?category "sports"))
+	=>
+	(make-instance of Game_sports_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_puzzle
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (eq ?category "puzzle"))
+	=>
+	(make-instance of Game_puzzle_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_family
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (eq ?category "family"))
+	=>
+	(make-instance of Game_family_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_rol
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (eq ?category "rol"))
+	=>
+	(make-instance of Game_rol_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
+(defrule games_strategy
+	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
+	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(test (eq ?category "strategy"))
+	=>
+	(make-instance of Game_strategy_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+)
+
 
 /*********************************************/
 /******** Remove duplicates instances ********/
