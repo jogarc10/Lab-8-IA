@@ -47,7 +47,7 @@
 
 	; Locations facts
 	
-	/*
+	
 	(Location 
 		(location_city "Madrid")
 		(location_continent "Europe")
@@ -86,44 +86,80 @@
 		(designer_name "Cliff Blezinsnky")
 		(designer_category "Rol")
 	)
-	*/
+
+	(Designer 
+		(designer_location "Tokyo")
+		(designer_name "Miyamoto")
+		(designer_category "Sports")
+	)
+	
 	
 	; Game facts
  
+	(Game
+		(game_age 9)
+		(game_category "strategy")
+		(game_difficulty "easy")
+		(game_duration 30)
+		(game_manufacturer "CocktailGames")
+		(game_name "Go Game")
+		(game_price 60.0)
+		(game_style "single")
+		(stores "Game")
+	)
+
 	(Game
 		(game_age 9)
 		(game_category "adventure")
 		(game_difficulty "hard")
 		(game_duration 60)
 		(game_manufacturer "CocktailGames")
-		(game_name "Go Game")
+		(game_name "Pong")
 		(game_price 20.0)
 		(game_style "single")
 		(stores "Game")
 	)
+
 	(Game
 		(game_age 13)
 		(game_category "family")
-		(game_difficulty "easy")
-		(game_duration 90)
+		(game_difficulty "hard")
+		(game_duration 45)
 		(game_manufacturer "Holocubierta")
 		(game_name "Wolf")
-		(game_price 40.0)
+		(game_price 35.0)
 		(game_style "cooperative")
 		(stores "Game")
 	)
 
+	(Game
+		(game_age 13)
+		(game_category "rol")
+		(game_difficulty "easy")
+		(game_duration 90)
+		(game_manufacturer "CocktailGames")
+		(game_name "Puerto Rico")
+		(game_price 40.0)
+		(game_style "cooperative")
+		(stores "MazingerZ")
+	)
 
 	; Store facts
-	/*(Store
-		(store_games "Wolf" "Go Game" "Puerto Rico")
+	(Store
+		(store_games "Wolf" "Go Game" "Pong")
 		(store_location "Madrid" "NewYork")
 		(store_name "Game")
 	)
-	*/
+
+	(Store
+		(store_games "Puerto Rico")
+		(store_location "Tokyo")
+		(store_name "MazingerZ")
+	)
+	
 )
 
-/*
+
 (defrule locations
 	(Location (location_city ?city)(location_continent ?continent) (location_country ?country))
 	=>
@@ -143,7 +179,7 @@
 	=>
 	(make-instance of Designer (designer_location ?h1) (designer_name ?name ) (designer_category ?category))
 )
-*/
+
 
 (defrule games
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -153,13 +189,13 @@
 	(make-instance of Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-/*
+
 (defrule crear_store1
 	(Store (store_name ?name))
 	=>
 	(make-instance of Store (store_name ?name))
 )
-*/
+
 
 (defrule game_stores_rules
 	(Game (game_name ?name) (stores $? ?str $?))
