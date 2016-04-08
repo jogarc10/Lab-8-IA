@@ -1,4 +1,4 @@
-; Fri Apr 08 17:03:32 CEST 2016
+; Fri Apr 08 18:55:58 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -27,13 +27,13 @@
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(create-accessor read-write))
-	(single-slot designer_name
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot game_manufacturer
 		(type INSTANCE)
 ;+		(allowed-classes Manufacturer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot designer_name
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_difficulty_wanted
@@ -53,8 +53,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot user_recommendations
-		(type INSTANCE)
-;+		(allowed-classes Game)
+		(type STRING)
 		(create-accessor read-write))
 	(multislot designer_location
 		(type INSTANCE)
@@ -70,6 +69,10 @@
 	(single-slot user_time_to_play
 		(type INTEGER)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Practica7_Class9
+		(type INSTANCE)
+;+		(allowed-classes Store)
 		(create-accessor read-write))
 	(single-slot game_difficulty
 		(type STRING)
@@ -103,15 +106,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot designer_category
-		(type SYMBOL)
-		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
-		(create-accessor read-write))
-	(single-slot Practica7_Class24
+	(single-slot designer_category
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Practica7_Class25
+	(single-slot Practica7_Class24
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -119,6 +118,10 @@
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Practica7_Class25
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION
 		(type STRING)
@@ -148,13 +151,13 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot manufacturer_name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot game_price
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot manufacturer_name
-		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot location_continent
@@ -274,13 +277,13 @@
 (defclass Game
 	(is-a USER)
 	(role concrete)
-	(single-slot game_style
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot game_price
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_style
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot game_name
@@ -442,7 +445,7 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
-(defclass User
+(defclass My_User
 	(is-a USER)
 	(role concrete)
 	(single-slot user_difficulty_wanted
@@ -454,8 +457,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot user_recommendations
-		(type INSTANCE)
-;+		(allowed-classes Game)
+		(type STRING)
 		(create-accessor read-write))
 	(single-slot user_budget
 		(type FLOAT)
@@ -465,34 +467,34 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot user_style_wanted
-		(type STRING)
+	(single-slot user_time_to_play
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_category_wanted
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot user_time_to_play
-		(type INTEGER)
+	(single-slot user_style_wanted
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Designer
 	(is-a USER)
 	(role concrete)
-	(multislot designer_category
-		(type SYMBOL)
-		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
+	(single-slot designer_category
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot designer_name
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot designer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot designer_name
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Location
@@ -502,11 +504,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot location_country
+	(single-slot location_continent
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot location_continent
+	(single-slot location_country
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
@@ -518,11 +520,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot store_games
-		(type INSTANCE)
-;+		(allowed-classes Game)
-		(create-accessor read-write))
 	(multislot store_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
+		(create-accessor read-write))
+	(multislot store_games
+		(type INSTANCE)
+;+		(allowed-classes Game)
 		(create-accessor read-write)))

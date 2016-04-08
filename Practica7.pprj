@@ -1,4 +1,4 @@
-; Fri Apr 08 17:03:32 CEST 2016
+; Fri Apr 08 18:55:58 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,18 +20,18 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Practica7_ProjectKB_Class20299]
-		[Practica7_ProjectKB_Class20300]
-		[Practica7_ProjectKB_Class20301]
-		[Practica7_ProjectKB_Class20302]
-		[Practica7_ProjectKB_Class20303]
-		[Practica7_ProjectKB_Class20304]
-		[Practica7_ProjectKB_Class20305]
-		[Practica7_ProjectKB_Class20306]
-		[Practica7_ProjectKB_Class20307]
-		[Practica7_ProjectKB_Class20308]
-		[Practica7_ProjectKB_Class20309]
-		[Practica7_ProjectKB_Class20310]))
+		[Practica7_ProjectKB_Class20248]
+		[Practica7_ProjectKB_Class20249]
+		[Practica7_ProjectKB_Class20250]
+		[Practica7_ProjectKB_Class20251]
+		[Practica7_ProjectKB_Class20252]
+		[Practica7_ProjectKB_Class20253]
+		[Practica7_ProjectKB_Class20254]
+		[Practica7_ProjectKB_Class20255]
+		[Practica7_ProjectKB_Class20256]
+		[Practica7_ProjectKB_Class20257]
+		[Practica7_ProjectKB_Class20258]
+		[Practica7_ProjectKB_Class20259]))
 
 ([CLSES_TAB] of  Widget
 
@@ -75,6 +75,9 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
+([KB_212359_Class3] of  Map
+)
+
 ([KB_724723_Class0] of  String
 
 	(name "factory_class_name")
@@ -83,9 +86,9 @@
 ([KB_724723_Class1] of  Map
 
 	(entries
-		[Practica7_ProjectKB_Class20311]
-		[Practica7_ProjectKB_Class20312]
-		[Practica7_ProjectKB_Class20313]))
+		[Practica7_ProjectKB_Class20260]
+		[Practica7_ProjectKB_Class20261]
+		[Practica7_ProjectKB_Class20262]))
 
 ([KB_724723_Class100] of  String
 
@@ -179,9 +182,6 @@
 	(name "classes_file_name")
 	(string_value "main.pont"))
 
-([KB_826666_Class3] of  Map
-)
-
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -274,10 +274,146 @@
 
 	(name "layout properties"))
 
+([Practica7_ProjectKB_Class10004] of  Widget
+
+	(is_hidden FALSE)
+	(name "My_User")
+	(property_list [Practica7_ProjectKB_Class10005])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([Practica7_ProjectKB_Class10005] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class10006]
+		[Practica7_ProjectKB_Class10007]
+		[Practica7_ProjectKB_Class10009]
+		[Practica7_ProjectKB_Class10011]
+		[Practica7_ProjectKB_Class10013]
+		[Practica7_ProjectKB_Class10015]
+		[Practica7_ProjectKB_Class10017]
+		[Practica7_ProjectKB_Class10019]
+		[Practica7_ProjectKB_Class10021]))
+
+([Practica7_ProjectKB_Class10006] of  Property_List
+
+	(name "layout properties"))
+
+([Practica7_ProjectKB_Class10007] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_difficulty_wanted")
+	(property_list [Practica7_ProjectKB_Class10008])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([Practica7_ProjectKB_Class10008] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10009] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_age")
+	(property_list [Practica7_ProjectKB_Class10010])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 330))
+
+([Practica7_ProjectKB_Class10010] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10011] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "user_recommendations")
+	(property_list [Practica7_ProjectKB_Class10012])
+	(widget_class_name "edu.stanford.smi.protege.widget.StringListWidget")
+	(width 440)
+	(x 270)
+	(y 20))
+
+([Practica7_ProjectKB_Class10012] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10013] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_budget")
+	(property_list [Practica7_ProjectKB_Class10014])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 260))
+
+([Practica7_ProjectKB_Class10014] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10015] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_name")
+	(property_list [Practica7_ProjectKB_Class10016])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([Practica7_ProjectKB_Class10016] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10017] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_time_to_play")
+	(property_list [Practica7_ProjectKB_Class10018])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 140)
+	(x 120)
+	(y 260))
+
+([Practica7_ProjectKB_Class10018] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10019] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_category_wanted")
+	(property_list [Practica7_ProjectKB_Class10020])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([Practica7_ProjectKB_Class10020] of  Property_List
+)
+
+([Practica7_ProjectKB_Class10021] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_style_wanted")
+	(property_list [Practica7_ProjectKB_Class10022])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 190))
+
+([Practica7_ProjectKB_Class10022] of  Property_List
+)
+
 ([Practica7_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query")
-	(string_value "Query Name: 1-Strategy games with less than one hour\nMatch All:true\nLength: 1\nGame_strategy_cat	 	is less than	Other:60	1	\n\nQuery Name: 2-Less 50; Hard, Short and Coop\nMatch All:true\nLength: 4\nGame_less_50_price	 	Other:	null	\nGame_hard_diff	 	Other:	null	\nGame_cooperative_style	 	Other:	null	\nGame_short_duration	 	Other:	null	\n\nQuery Name: 4-European designers that made rol games\nMatch All:true\nLength: 2\nDesigner	 	is	Other:Rol	1	\nDesigner	 	contains	Other:Europe-Location	1	\n\nQuery Name: 5-Shops that sold Puerto Rico\nMatch All:true\nLength: 1\nStore	 	contains	Other:SimpleInstance(Practica7_Class7 of [])	1	\n\nQuery Name: 6-Rol games for kids between 10 and 14 years\nMatch All:true\nLength: 2\nGame_rol_cat	 	Other:	null	\nGame_10_to_14_age	 	Other:	null	\n\nQuery Name: Europe-Location\nMatch All:true\nLength: 1\nLocation	 	is	Other:Europe	1	\n\nQuery Name: Stores in europe\nMatch All:true\nLength: 1\nStore	 	contains	Other:Europe-Location	1	\n\nQuery Name: 3-Cocktail Games in Madrid or United States\nMatch All:true\nLength: 2\nGame	 	contains	Other:SimpleInstance(Practica7_Class5 of [])	1	\nGame	 	contains	Other:Stores in europe	1	\n\n"))
+	(string_value "Query Name: 1-Strategy and short game\nMatch All:true\nLength: 2\nGame_short_duration	 	Other:	null	\nGame_strategy_cat	 	Other:	null	\n\nQuery Name: 2-less 50, short, hard and coop\nMatch All:true\nLength: 4\nGame	game_difficulty	contains	Other:hard	1	\nGame	game_duration	is less than	Other:60	1	\nGame	game_style	contains	Other:cooperative	1	\nGame	game_price	is less than	Other:50	1	\n\nQuery Name: Madrid or NewYork\nMatch All:false\nLength: 2\nStore	store_location	contains	Instance: | 	1	\nStore	store_location	contains	Instance: | 	1	\n\nQuery Name: Continent europe\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: 4-Diseñadores europeos rol\nMatch All:true\nLength: 3\nDesigner	 	Other:	null	\nDesigner	designer_location	contains	Query:Continent europe|Continent europe	1	\nDesigner	designer_category	is	Other:Rol	1	\n\nQuery Name: 6-Rol entre 10 y 14 años\nMatch All:true\nLength: 3\nGame	game_category	contains	Other:rol	1	\nGame	game_age	is greater than	Other:9	1	\nGame	game_age	is less than	Other:15	1	\n\n"))
 
 ([Practica7_ProjectKB_Class10101] of  Widget
 
@@ -851,81 +987,489 @@
 ([Practica7_ProjectKB_Class20] of  Property_List
 )
 
-([Practica7_ProjectKB_Class20299] of  String
+([Practica7_ProjectKB_Class20173] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20174])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20174] of  Property_List
+)
+
+([Practica7_ProjectKB_Class20175] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20176])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20176] of  Property_List
+)
+
+([Practica7_ProjectKB_Class20177] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20178])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20178] of  Property_List
+)
+
+([Practica7_ProjectKB_Class20179] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20180])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20180] of  Property_List
+)
+
+([Practica7_ProjectKB_Class20181] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20182])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20182] of  Property_List
+)
+
+([Practica7_ProjectKB_Class20183] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20184])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20184] of  Property_List
+)
+
+([Practica7_ProjectKB_Class20185] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20186])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20186] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20187]
+		[Practica7_ProjectKB_Class20188]))
+
+([Practica7_ProjectKB_Class20187] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20188] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20189] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20190])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20190] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20191]
+		[Practica7_ProjectKB_Class20192]))
+
+([Practica7_ProjectKB_Class20191] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20192] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20193] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20194])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20194] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20195]
+		[Practica7_ProjectKB_Class20196]))
+
+([Practica7_ProjectKB_Class20195] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20196] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20197] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20198])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20198] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20199]
+		[Practica7_ProjectKB_Class20200]))
+
+([Practica7_ProjectKB_Class20199] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20200] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20201] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20202])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20202] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20203]
+		[Practica7_ProjectKB_Class20204]))
+
+([Practica7_ProjectKB_Class20203] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20204] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20205] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20206])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20206] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20207]
+		[Practica7_ProjectKB_Class20208]))
+
+([Practica7_ProjectKB_Class20207] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20208] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20209] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20210])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20210] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20211]
+		[Practica7_ProjectKB_Class20212]))
+
+([Practica7_ProjectKB_Class20211] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20212] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20213] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20214])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20214] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20215]
+		[Practica7_ProjectKB_Class20216]))
+
+([Practica7_ProjectKB_Class20215] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20216] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20217] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20218])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20218] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20219]
+		[Practica7_ProjectKB_Class20220]))
+
+([Practica7_ProjectKB_Class20219] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20220] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20221] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20222])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20222] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20223]
+		[Practica7_ProjectKB_Class20224]))
+
+([Practica7_ProjectKB_Class20223] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20224] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20225] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20226])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20226] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20227]
+		[Practica7_ProjectKB_Class20228]))
+
+([Practica7_ProjectKB_Class20227] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20228] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20229] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Practica7_Class9")
+	(property_list [Practica7_ProjectKB_Class20230])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([Practica7_ProjectKB_Class20230] of  Property_List
+
+	(properties
+		[Practica7_ProjectKB_Class20231]
+		[Practica7_ProjectKB_Class20232]))
+
+([Practica7_ProjectKB_Class20231] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([Practica7_ProjectKB_Class20232] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([Practica7_ProjectKB_Class20248] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Practica7_ProjectKB_Class20300] of  String
+([Practica7_ProjectKB_Class20249] of  String
 
 	(name "Location")
 	(string_value "location_city"))
 
-([Practica7_ProjectKB_Class20301] of  String
+([Practica7_ProjectKB_Class20250] of  String
 
 	(name "Game")
 	(string_value "game_name"))
 
-([Practica7_ProjectKB_Class20302] of  String
-
-	(name ":FUNCTION")
-	(string_value "%3ADEFINITION-NAME"))
-
-([Practica7_ProjectKB_Class20303] of  String
+([Practica7_ProjectKB_Class20251] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class20304] of  String
+([Practica7_ProjectKB_Class20252] of  String
+
+	(name ":FUNCTION")
+	(string_value "%3ADEFINITION-NAME"))
+
+([Practica7_ProjectKB_Class20253] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Practica7_ProjectKB_Class20305] of  String
+([Practica7_ProjectKB_Class20254] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([Practica7_ProjectKB_Class20306] of  String
+([Practica7_ProjectKB_Class20255] of  String
 
 	(name "Manufacturer")
 	(string_value "manufacturer_name"))
 
-([Practica7_ProjectKB_Class20307] of  String
-
-	(name "User")
-	(string_value "user_name"))
-
-([Practica7_ProjectKB_Class20308] of  String
+([Practica7_ProjectKB_Class20256] of  String
 
 	(name "Store")
 	(string_value "store_name"))
 
-([Practica7_ProjectKB_Class20309] of  String
+([Practica7_ProjectKB_Class20257] of  String
+
+	(name "My_User")
+	(string_value "user_name"))
+
+([Practica7_ProjectKB_Class20258] of  String
 
 	(name "Designer")
 	(string_value "designer_name"))
 
-([Practica7_ProjectKB_Class20310] of  String
+([Practica7_ProjectKB_Class20259] of  String
 
 	(name ":JESS-DEFINITION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class20311] of  Map_Entry
+([Practica7_ProjectKB_Class20260] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class20312] of  Map_Entry
+([Practica7_ProjectKB_Class20261] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class20313] of  Map_Entry
+([Practica7_ProjectKB_Class20262] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -1277,18 +1821,19 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[Practica7_ProjectKB_Class75]
-		[Practica7_ProjectKB_Class10168]
-		[PAL_FORM_WIDGET]
-		[Practica7_ProjectKB_Class88]
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[Practica7_ProjectKB_Class10189]
-		[Practica7_ProjectKB_Class10210]
-		[STANDARD_SLOT_FORM_WIDGET]
 		[Practica7_ProjectKB_Class10130]
+		[Practica7_ProjectKB_Class10168]
 		[STANDARD_FACET_FORM_WIDGET]
+		[PAL_FORM_WIDGET]
 		[Practica7_ProjectKB_Class10147]
 		[STANDARD_CLASS_FORM_WIDGET]
-		[Practica7_ProjectKB_Class10109])
+		[Practica7_ProjectKB_Class88]
+		[Practica7_ProjectKB_Class10004]
+		[Practica7_ProjectKB_Class10109]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[Practica7_ProjectKB_Class10189]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[Practica7_ProjectKB_Class10210])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

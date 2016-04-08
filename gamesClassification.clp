@@ -6,7 +6,7 @@
 (mapclass Location)
 (mapclass Manufacturer)
 (mapclass Store)
-(mapclass User)
+(mapclass My_User)
 
 (deftemplate Designer
 	(slot designer_location)
@@ -160,17 +160,13 @@
 )
 
 (defrule recommend_games
-	(object (is-a User) (user_name ?name) (user_age ?age) (user_budget ?price) (user_category_wanted ?category) (user_difficulty_wanted ?difficulty)
-	(user_time_to_play ?duration) (user_style_wanted ?style) (user_recommendations $?rec) (OBJECT ?p))
-	(object (is-a Game) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_price ?price) 
-	(game_style ?style) (OBJECT ?c))
+	(object (is-a My_User) (user_recommendations $?rec) (OBJECT ?p))
+	(object (is-a Game) (game_name ?game_name)(OBJECT ?c))
 
-	(test (not (member$ ?c ?rec)))
+	(test (not (member$ ?game_name ?rec)))
 	=>
-	(slot-insert$ ?p user_recommendations 1 ?c)
+	(slot-insert$ ?p user_recommendations 1 ?game_name)
 )
-
-
 
 (mapclass :THING)
 
@@ -489,13 +485,13 @@
 )
 
 (defrule remove_if_duplicate_store
-	(object (is-a Location)
+	(object (is-a Store)
 		(OBJECT ?p)
-		(location_city ?loc)
+		(store_name ?sto)
 	)
-	(object (is-a Game)
+	(object (is-a Store)
 		(OBJECT ~?p)
-		(location_city ?loc)
+		(store_name ?sto)
 	)
 	=>
 	(unmake-instance ?p)
