@@ -1,7 +1,171 @@
-; Fri Apr 08 12:30:25 CEST 2016
+; Fri Apr 08 17:03:32 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([Jess+engine] of  %3AJESS-ENGINE
 )
+
+([Practica7_Class0] of  Store
+
+	(store_games
+		[Practica7_Class6]
+		[Practica7_Class4])
+	(store_location
+		[Practica7_Class7]
+		[Practica7_Class2])
+	(store_name "Game"))
+
+([Practica7_Class1] of  Location
+
+	(location_city "Tokyo")
+	(location_continent "Asia")
+	(location_country "Japan"))
+
+([Practica7_Class18] of  User
+
+	(user_age 15)
+	(user_budget 100.0)
+	(user_category_wanted "adventure")
+	(user_difficulty_wanted "hard")
+	(user_name "Pedro")
+	(user_style_wanted "single")
+	(user_time_to_play 90))
+
+([Practica7_Class2] of  Location
+
+	(location_city "NewYork")
+	(location_continent "America")
+	(location_country "USA"))
+
+([Practica7_Class3] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class2])
+	(manufacturer_name "RedBricksStudio"))
+
+([Practica7_Class4] of  Game Game_less_50_price Game_cooperative_style Game_medium_duration Game_easy_diff Game_family_cat Game_10_to_14_age
+
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative")
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative")
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative")
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative")
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative")
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative")
+	(game_age 13)
+	(game_category "family")
+	(game_difficulty "easy")
+	(game_duration 90)
+	(game_manufacturer [Practica7_Class3])
+	(game_name "Wolf")
+	(game_price 40.0)
+	(game_style "cooperative"))
+
+([Practica7_Class5] of  Manufacturer
+
+	(manufacturer_location [Practica7_Class2])
+	(manufacturer_name "CocktailGames"))
+
+([Practica7_Class6] of  Game Game_less_30_price Game_adventure_cat Game_single_player_style Game_hard_diff Game_short_duration
+
+	(game_age 9)
+	(game_category "adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class5])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single")
+	(game_age 9)
+	(game_category "adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class5])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single")
+	(game_age 9)
+	(game_category "adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class5])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single")
+	(game_age 9)
+	(game_category "adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class5])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single")
+	(game_age 9)
+	(game_category "adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class5])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single")
+	(game_age 9)
+	(game_category "adventure")
+	(game_difficulty "hard")
+	(game_duration 60)
+	(game_manufacturer [Practica7_Class5])
+	(game_name "Go Game")
+	(game_price 20.0)
+	(game_style "single"))
+
+([Practica7_Class7] of  Location
+
+	(location_city "Madrid")
+	(location_continent "Europe")
+	(location_country "Spain"))
+
+([Practica7_Class8] of  Designer
+
+	(designer_category Rol)
+	(designer_location [Practica7_Class7])
+	(designer_name "Cliff Blezinsnky"))
