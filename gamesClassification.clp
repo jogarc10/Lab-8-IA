@@ -304,7 +304,7 @@
 )
 
 (defrule games_less_50
-	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 	(test (and(>= ?price 40.0)(< ?price 50.0)))
 
 	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_50_price")(:DIRECT-INSTANCES $?x))
@@ -313,7 +313,7 @@
 		(insert$ ?x (+ 1 (length$ ?x)) ?h))
 )
 
-(defrule games_more_50
+(defrule games_more_60
 	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
 	(test (>= ?price 60.0))
 
