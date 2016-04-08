@@ -1,4 +1,4 @@
-; Fri Apr 08 18:55:58 CEST 2016
+; Fri Apr 08 19:34:43 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -27,13 +27,13 @@
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(create-accessor read-write))
+	(single-slot designer_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot game_manufacturer
 		(type INSTANCE)
 ;+		(allowed-classes Manufacturer)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot designer_name
-		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_difficulty_wanted
@@ -52,6 +52,10 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(multislot game_store
+		(type INSTANCE)
+;+		(allowed-classes Store)
+		(create-accessor read-write))
 	(multislot user_recommendations
 		(type STRING)
 		(create-accessor read-write))
@@ -59,6 +63,10 @@
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot Practica7_Class10
+		(type INSTANCE)
+;+		(allowed-classes Store)
 		(create-accessor read-write))
 	(single-slot %3AKB-SAVE
 		(type SYMBOL)
@@ -90,6 +98,10 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot ga
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot user_age
 		(type INTEGER)
 ;+		(cardinality 0 1)
@@ -114,14 +126,14 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot Practica7_Class25
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot manufacturer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot Practica7_Class25
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION
 		(type STRING)
@@ -151,13 +163,13 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot manufacturer_name
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot game_price
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot manufacturer_name
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot location_continent
@@ -297,6 +309,10 @@
 	(single-slot game_category
 		(type STRING)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot game_store
+		(type INSTANCE)
+;+		(allowed-classes Store)
 		(create-accessor read-write))
 	(single-slot game_manufacturer
 		(type INSTANCE)
@@ -467,16 +483,16 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot user_time_to_play
-		(type INTEGER)
+	(single-slot user_style_wanted
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_category_wanted
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot user_style_wanted
-		(type STRING)
+	(single-slot user_time_to_play
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -487,14 +503,14 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot designer_name
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot designer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot designer_name
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Location
@@ -504,11 +520,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot location_continent
+	(single-slot location_country
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot location_country
+	(single-slot location_continent
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
@@ -520,11 +536,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot store_location
-		(type INSTANCE)
-;+		(allowed-classes Location)
-		(create-accessor read-write))
 	(multislot store_games
 		(type INSTANCE)
 ;+		(allowed-classes Game)
+		(create-accessor read-write))
+	(multislot store_location
+		(type INSTANCE)
+;+		(allowed-classes Location)
 		(create-accessor read-write)))

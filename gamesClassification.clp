@@ -23,6 +23,7 @@
 	(slot game_name)
 	(slot game_price)
 	(slot game_style)
+	(multislot stores)
 ) 
 
 (deftemplate Location
@@ -46,6 +47,7 @@
 
 	; Locations facts
 	
+	/*
 	(Location 
 		(location_city "Madrid")
 		(location_continent "Europe")
@@ -72,6 +74,10 @@
 		(manufacturer_city "NewYork")
 		(manufacturer_name "RedBricksStudio")
 	)
+	(Manufacturer 
+		(manufacturer_city "Tokyo")
+		(manufacturer_name "Holocubierta")
+	)
 	
 	; Designer facts
 	
@@ -80,6 +86,7 @@
 		(designer_name "Cliff Blezinsnky")
 		(designer_category "Rol")
 	)
+	*/
 	
 	; Game facts
  
@@ -92,26 +99,31 @@
 		(game_name "Go Game")
 		(game_price 20.0)
 		(game_style "single")
+		(stores "Game")
 	)
 	(Game
 		(game_age 13)
 		(game_category "family")
 		(game_difficulty "easy")
 		(game_duration 90)
-		(game_manufacturer "RedBricksStudio")
+		(game_manufacturer "Holocubierta")
 		(game_name "Wolf")
 		(game_price 40.0)
 		(game_style "cooperative")
+		(stores "Game")
 	)
 
+
 	; Store facts
-	(Store
-		(store_games "Wolf" "Go Game")
+	/*(Store
+		(store_games "Wolf" "Go Game" "Puerto Rico")
 		(store_location "Madrid" "NewYork")
 		(store_name "Game")
 	)
+	*/
 )
 
+/*
 (defrule locations
 	(Location (location_city ?city)(location_continent ?continent) (location_country ?country))
 	=>
@@ -131,6 +143,7 @@
 	=>
 	(make-instance of Designer (designer_location ?h1) (designer_name ?name ) (designer_category ?category))
 )
+*/
 
 (defrule games
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -140,10 +153,22 @@
 	(make-instance of Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
+/*
 (defrule crear_store1
 	(Store (store_name ?name))
 	=>
 	(make-instance of Store (store_name ?name))
+)
+*/
+
+(defrule game_stores_rules
+	(Game (game_name ?name) (stores $? ?str $?))
+	(object (is-a Game) (game_name ?name) (game_store $?cs) (OBJECT ?p))
+	(object (is-a Store) (store_name ?str) (OBJECT ?c))
+
+	(test (not (member$ ?c ?cs)))
+	=>
+	(slot-insert$ ?p game_store 1 ?c)
 )
 
 (defrule crear_store2
