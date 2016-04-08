@@ -1,8 +1,7 @@
 
-/*
-(defrule games_less_10
+
+/*(defrule games_less_10
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
-	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
 	(test (< ?age 10))
 	=>
 	(make-instance of Game_less_10_age (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -31,7 +30,7 @@
 	=>
 	(make-instance of Game_greater_18_age (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
-*/
+
 
 /*** Classification by style ***/
 
@@ -201,4 +200,4 @@
 	(test (eq ?category "strategy"))
 	=>
 	(make-instance of Game_strategy_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
-)
+)*/
