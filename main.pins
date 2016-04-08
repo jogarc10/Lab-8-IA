@@ -1,29 +1,10 @@
-; Fri Apr 08 19:54:38 CEST 2016
-; 
+; Fri Apr 08 20:55:36 CEST 2016
+;
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([Jess+engine] of  %3AJESS-ENGINE
 )
-
-([Practica7_Class0] of  Designer
-
-	(designer_category "rol")
-	(designer_location [Practica7_Class1])
-	(designer_name "Frederich"))
-
-([Practica7_Class1] of  Location
-
-	(location_city "Madrid")
-	(location_continent "Europe")
-	(location_country "Spain"))
-
-([Practica7_Class10010] of  Store
-
-	(store_location
-		[Practica7_Class1]
-		[Practica7_Class2])
-	(store_name "Game"))
 
 ([Practica7_Class10066] of  My_User
 
@@ -32,10 +13,6 @@
 	(user_category_wanted "single")
 	(user_difficulty_wanted "hard")
 	(user_name "Pedro")
-	(user_recommendations
-		"Puerto Rico"
-		"Go Game"
-		"Wolf")
 	(user_style_wanted "adventure")
 	(user_time_to_play 90))
 
