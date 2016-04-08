@@ -45,48 +45,7 @@
  	
 (deffacts ini
 
-	; Locations facts
 	
-	/*
-	(Location 
-		(location_city "Madrid")
-		(location_continent "Europe")
-		(location_country "Spain")
-	)
-	(Location 
-		(location_city "NewYork")
-		(location_continent "America")
-		(location_country "USA")
-	)
-	(Location 
-		(location_city "Tokyo")
-		(location_continent "Asia")
-		(location_country "Japan")
-	)
-	
-	; Manufacturers facts
-	
-	(Manufacturer
-		(manufacturer_city "NewYork")
-		(manufacturer_name "CocktailGames")
-	)
-	(Manufacturer 
-		(manufacturer_city "NewYork")
-		(manufacturer_name "RedBricksStudio")
-	)
-	(Manufacturer 
-		(manufacturer_city "Tokyo")
-		(manufacturer_name "Holocubierta")
-	)
-	
-	; Designer facts
-	
-	(Designer 
-		(designer_location "Madrid")
-		(designer_name "Cliff Blezinsnky")
-		(designer_category "Rol")
-	)
-	*/
 	
 	; Game facts
  
@@ -115,35 +74,10 @@
 
 
 	; Store facts
-	/*(Store
-		(store_games "Wolf" "Go Game" "Puerto Rico")
-		(store_location "Madrid" "NewYork")
-		(store_name "Game")
-	)
-	*/
+	
 )
 
-/*
-(defrule locations
-	(Location (location_city ?city)(location_continent ?continent) (location_country ?country))
-	=>
-	(make-instance of Location (location_city ?city)(location_continent ?continent) (location_country ?country))
-)
-
-(defrule manufacturer
-	(Manufacturer (manufacturer_city ?city)(manufacturer_name ?name))
-	(object (is-a Location) (OBJECT ?h1) (location_city ?city)) 
-	=>
-	(make-instance of Manufacturer (manufacturer_location ?h1)(manufacturer_name ?name))
-)
-
-(defrule designer
-	(Designer (designer_location ?city) (designer_name ?name ) (designer_category ?category))
-	(object (is-a Location) (OBJECT ?h1) (location_city ?city))
-	=>
-	(make-instance of Designer (designer_location ?h1) (designer_name ?name ) (designer_category ?category))
-)
-*/
+/*1*/
 
 (defrule games
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -153,13 +87,7 @@
 	(make-instance of Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
 )
 
-/*
-(defrule crear_store1
-	(Store (store_name ?name))
-	=>
-	(make-instance of Store (store_name ?name))
-)
-*/
+/*2*/
 
 (defrule game_stores_rules
 	(Game (game_name ?name) (stores $? ?str $?))
