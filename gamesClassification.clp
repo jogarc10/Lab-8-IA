@@ -1,6 +1,7 @@
 /* (batch "C:/hlocal/Lab-8-IA/gamesClassification.clp") */
 (clear)
 
+(mapclass :THING)
 (mapclass Designer)
 (mapclass Game)
 (mapclass Location)
@@ -124,20 +125,303 @@
 	(make-instance of Designer (designer_location ?h1) (designer_name ?name ) (designer_category ?category))
 )
 
-/*****************************************************/
-/******** Classification by age of the games ********/
-/****************************************************/
-
-/*(defrule games
+(defrule games
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
-	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
+	(object (is-a Manufacturer) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
 	=>
 	(make-instance of Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
-)*/
+)
+
+/*Classification by age of the games */
 
 (defrule games_less_10
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (< ?age 10))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_10_age")(:DIRECT-INSTANCES $?x))
+	=>
+
+	(slot-set "Game_less_10_age" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_less_10_14
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test(and(> ?age 10) (<= ?age 14)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_10_to_14_age")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_10_to_14_age" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_less_14_18
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test(and(> ?age 14) (<= ?age 18)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_14_to_18_age")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_14_to_18_age" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_greater_18
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (> ?age 18))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_greater_18_age")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_greater_18_age" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+/*** Classification by style ***/
+
+(defrule games_single_player
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+	(test (eq ?style "single"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_single_player_style")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_single_player_style" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_cooperative
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?style "cooperative"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_cooperative_style")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_cooperative_style" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+/*** Classification by difficulty ***/
+
+(defrule games_easy
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?difficulty "easy"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_easy_diff")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_easy_diff" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_normal
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?difficulty "normal"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_normal_diff")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_normal_diff" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_hard
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?difficulty "hard"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_hard_diff")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_hard_diff" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+/*** Classification by duration ***/
+
+(defrule games_short
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))  
+	(test (<= ?duration 60))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_short_duration")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_short_duration" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_medium
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (and(> ?duration 60)(<= ?duration 120)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_medium_duration")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_medium_duration" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_long
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (> ?duration 120))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_long_duration")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_long_duration" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+/*** Classification by price ***/
+
+(defrule games_less_10
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))  
+	(test (< ?price 10.0))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_10_price")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_less_10_price" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_less_20
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (and(>= ?price 10.0)(< ?price 20.0)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_20_price")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_less_20_price" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_less_30
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))  
+	(test (and(>= ?price 20.0)(< ?price 30.0)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_30_price")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_less_30_price" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_less_40
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
+	(test (and(>= ?price 30.0)(< ?price 40.0)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_40_price")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_less_40_price" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_less_50
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (and(>= ?price 40.0)(< ?price 50.0)))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_less_50_price")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_less_50_price" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_more_50
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (>= ?price 60.0))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_more_50_price")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_more_50_price" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+/*** Classification by category ***/
+
+(defrule games_adventure
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?category "adventure"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_adventure_cat")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_adventure_cat" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_sports
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?category "sports"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_sports_cat")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_sports_cat" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_puzzle
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?category "puzzle"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_puzzle_cat")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_puzzle_cat" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_family
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))  
+	(test (eq ?category "family"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_family_cat")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_family_cat" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_rol
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?category "rol"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_rol_cat")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_rol_cat" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+(defrule games_strategy
+	(object (is-a Game) (OBJECT ?h1) (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style)) 
+	(test (eq ?category "strategy"))
+
+	(object(is-a :STANDARD-CLASS)(:NAME "Game_strategy_cat")(:DIRECT-INSTANCES $?x))
+	=>
+	(slot-set "Game_strategy_cat" :DIRECT-INSTANCES
+		(insert$ ?x (+ 1 (length$ ?x)) ?h))
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*(defrule games_less_10
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
-	(object (is-a Manufacturer) (OBJECT ?h1) (manufacturer_name ?manufacturer)) 
 	(test (< ?age 10))
 	=>
 	(make-instance of Game_less_10_age (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
@@ -336,7 +620,7 @@
 	(test (eq ?category "strategy"))
 	=>
 	(make-instance of Game_strategy_cat (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?h1) (game_name ?name) (game_price ?price) (game_style ?style))
-)
+)*/
 
 
 /*********************************************/

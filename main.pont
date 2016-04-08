@@ -1,4 +1,4 @@
-; Thu Apr 07 11:51:53 CEST 2016
+; Fri Apr 08 12:30:25 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -27,13 +27,13 @@
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(create-accessor read-write))
-	(single-slot designer_name
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot game_manufacturer
 		(type INSTANCE)
 ;+		(allowed-classes Manufacturer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot designer_name
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot store_games
@@ -87,14 +87,14 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Practica7_Class25
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot manufacturer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Practica7_Class25
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION
 		(type STRING)
@@ -116,13 +116,13 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot manufacturer_name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot game_price
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot manufacturer_name
-		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot location_continent
@@ -242,13 +242,13 @@
 (defclass Game
 	(is-a USER)
 	(role concrete)
-	(single-slot game_style
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot game_price
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot game_style
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot game_name
@@ -417,14 +417,14 @@
 		(type SYMBOL)
 		(allowed-values Adventure Sports Puzzle Family Rol Strategy)
 		(create-accessor read-write))
+	(single-slot designer_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot designer_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot designer_name
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Location
@@ -434,11 +434,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot location_country
+	(single-slot location_continent
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot location_continent
+	(single-slot location_country
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
@@ -450,11 +450,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot store_games
-		(type INSTANCE)
-;+		(allowed-classes Game)
-		(create-accessor read-write))
 	(multislot store_location
 		(type INSTANCE)
 ;+		(allowed-classes Location)
+		(create-accessor read-write))
+	(multislot store_games
+		(type INSTANCE)
+;+		(allowed-classes Game)
 		(create-accessor read-write)))
