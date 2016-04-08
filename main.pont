@@ -1,4 +1,4 @@
-; Fri Apr 08 20:38:54 CEST 2016
+; Fri Apr 08 20:55:36 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -43,6 +43,9 @@
 	(multislot store_games
 		(type INSTANCE)
 ;+		(allowed-classes Game)
+		(create-accessor read-write))
+	(multislot user_duration_wanted
+		(type INTEGER)
 		(create-accessor read-write))
 	(single-slot user_style_wanted
 		(type STRING)
@@ -478,6 +481,9 @@
 	(single-slot user_budget
 		(type FLOAT)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot user_duration_wanted
+		(type INTEGER)
 		(create-accessor read-write))
 	(single-slot user_name
 		(type STRING)

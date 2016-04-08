@@ -221,9 +221,14 @@
 )
 
 (defrule recommend_games
-	(object (is-a My_User) (user_recommendations $?rec) (OBJECT ?p))
-	(object (is-a Game) (game_name ?game_name)(OBJECT ?c))
+	(object (is-a My_User) (user_age ?age) (user_budget ?budget) (user_category_wanted ?category)(user_difficulty_wanted ?difficulty)
+	(user_name ?name)(user_style_wanted ?style)(user_time_to_play ?time) (user_duration_wanted ?duration)(user_recommendations $?rec) (OBJECT ?p))
+	
+	(object (is-a Game) (game_age ?age_game) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration_game)(game_name ?game_name) (game_price ?price_game) (game_style ?style)(OBJECT ?c))
 
+	(test (<= ?duration_game ?duration))
+	(test (<= ?price_game ?budget))
+	(test (<= ?age_game ?age))
 	(test (not (member$ ?game_name ?rec)))
 	=>
 	(slot-insert$ ?p user_recommendations 1 ?game_name)

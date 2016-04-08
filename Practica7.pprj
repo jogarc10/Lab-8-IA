@@ -1,4 +1,4 @@
-; Fri Apr 08 20:38:54 CEST 2016
+; Fri Apr 08 20:55:36 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,18 +20,18 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Practica7_ProjectKB_Class30428]
-		[Practica7_ProjectKB_Class30429]
-		[Practica7_ProjectKB_Class30430]
-		[Practica7_ProjectKB_Class30431]
-		[Practica7_ProjectKB_Class30432]
-		[Practica7_ProjectKB_Class30433]
-		[Practica7_ProjectKB_Class30434]
-		[Practica7_ProjectKB_Class30435]
-		[Practica7_ProjectKB_Class30436]
-		[Practica7_ProjectKB_Class30437]
-		[Practica7_ProjectKB_Class30438]
-		[Practica7_ProjectKB_Class30439]))
+		[Practica7_ProjectKB_Class30467]
+		[Practica7_ProjectKB_Class30468]
+		[Practica7_ProjectKB_Class30469]
+		[Practica7_ProjectKB_Class30470]
+		[Practica7_ProjectKB_Class30471]
+		[Practica7_ProjectKB_Class30472]
+		[Practica7_ProjectKB_Class30473]
+		[Practica7_ProjectKB_Class30474]
+		[Practica7_ProjectKB_Class30475]
+		[Practica7_ProjectKB_Class30476]
+		[Practica7_ProjectKB_Class30477]
+		[Practica7_ProjectKB_Class30478]))
 
 ([CLSES_TAB] of  Widget
 
@@ -83,9 +83,9 @@
 ([KB_724723_Class1] of  Map
 
 	(entries
-		[Practica7_ProjectKB_Class30440]
-		[Practica7_ProjectKB_Class30441]
-		[Practica7_ProjectKB_Class30442]))
+		[Practica7_ProjectKB_Class30479]
+		[Practica7_ProjectKB_Class30480]
+		[Practica7_ProjectKB_Class30481]))
 
 ([KB_724723_Class100] of  String
 
@@ -292,7 +292,8 @@
 		[Practica7_ProjectKB_Class10015]
 		[Practica7_ProjectKB_Class10017]
 		[Practica7_ProjectKB_Class10019]
-		[Practica7_ProjectKB_Class10021]))
+		[Practica7_ProjectKB_Class10021]
+		[Practica7_ProjectKB_Class30465]))
 
 ([Practica7_ProjectKB_Class10006] of  Property_List
 
@@ -1038,81 +1039,123 @@
 ([Practica7_ProjectKB_Class30] of  Property_List
 )
 
-([Practica7_ProjectKB_Class30428] of  String
+([Practica7_ProjectKB_Class30461] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_duration_wanted")
+	(property_list [Practica7_ProjectKB_Class30462])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 390))
+
+([Practica7_ProjectKB_Class30462] of  Property_List
+)
+
+([Practica7_ProjectKB_Class30463] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "user_duration_wanted")
+	(property_list [Practica7_ProjectKB_Class30464])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 390))
+
+([Practica7_ProjectKB_Class30464] of  Property_List
+)
+
+([Practica7_ProjectKB_Class30465] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "user_duration_wanted")
+	(property_list [Practica7_ProjectKB_Class30466])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerListWidget")
+	(width 200)
+	(x 0)
+	(y 390))
+
+([Practica7_ProjectKB_Class30466] of  Property_List
+)
+
+([Practica7_ProjectKB_Class30467] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Practica7_ProjectKB_Class30429] of  String
+([Practica7_ProjectKB_Class30468] of  String
 
 	(name "Location")
 	(string_value "location_city"))
 
-([Practica7_ProjectKB_Class30430] of  String
+([Practica7_ProjectKB_Class30469] of  String
 
 	(name "Game")
 	(string_value "game_name"))
 
-([Practica7_ProjectKB_Class30431] of  String
+([Practica7_ProjectKB_Class30470] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class30432] of  String
+([Practica7_ProjectKB_Class30471] of  String
 
 	(name ":FUNCTION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class30433] of  String
+([Practica7_ProjectKB_Class30472] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Practica7_ProjectKB_Class30434] of  String
+([Practica7_ProjectKB_Class30473] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([Practica7_ProjectKB_Class30435] of  String
+([Practica7_ProjectKB_Class30474] of  String
 
 	(name "Manufacturer")
 	(string_value "manufacturer_name"))
 
-([Practica7_ProjectKB_Class30436] of  String
+([Practica7_ProjectKB_Class30475] of  String
 
 	(name "Store")
 	(string_value "store_name"))
 
-([Practica7_ProjectKB_Class30437] of  String
+([Practica7_ProjectKB_Class30476] of  String
 
 	(name "My_User")
 	(string_value "user_name"))
 
-([Practica7_ProjectKB_Class30438] of  String
+([Practica7_ProjectKB_Class30477] of  String
 
 	(name "Designer")
 	(string_value "designer_name"))
 
-([Practica7_ProjectKB_Class30439] of  String
+([Practica7_ProjectKB_Class30478] of  String
 
 	(name ":JESS-DEFINITION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class30440] of  Map_Entry
+([Practica7_ProjectKB_Class30479] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class30441] of  Map_Entry
+([Practica7_ProjectKB_Class30480] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class30442] of  Map_Entry
+([Practica7_ProjectKB_Class30481] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
