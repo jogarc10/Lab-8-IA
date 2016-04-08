@@ -1,5 +1,10 @@
 
 
+
+
+
+
+
 /*(defrule games_less_10
 	(Game (game_age ?age) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration) (game_manufacturer ?manufacturer) (game_name ?name) (game_price ?price) (game_style ?style))
 	(test (< ?age 10))
