@@ -1,4 +1,4 @@
-; Fri Apr 08 19:34:43 CEST 2016
+; Fri Apr 08 19:54:38 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,18 +20,18 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Practica7_ProjectKB_Class20418]
-		[Practica7_ProjectKB_Class20419]
-		[Practica7_ProjectKB_Class20420]
-		[Practica7_ProjectKB_Class20421]
-		[Practica7_ProjectKB_Class20422]
-		[Practica7_ProjectKB_Class20423]
-		[Practica7_ProjectKB_Class20424]
-		[Practica7_ProjectKB_Class20425]
-		[Practica7_ProjectKB_Class20426]
-		[Practica7_ProjectKB_Class20427]
-		[Practica7_ProjectKB_Class20428]
-		[Practica7_ProjectKB_Class20429]))
+		[Practica7_ProjectKB_Class20071]
+		[Practica7_ProjectKB_Class20072]
+		[Practica7_ProjectKB_Class20073]
+		[Practica7_ProjectKB_Class20074]
+		[Practica7_ProjectKB_Class20075]
+		[Practica7_ProjectKB_Class20076]
+		[Practica7_ProjectKB_Class20077]
+		[Practica7_ProjectKB_Class20078]
+		[Practica7_ProjectKB_Class20079]
+		[Practica7_ProjectKB_Class20080]
+		[Practica7_ProjectKB_Class20081]
+		[Practica7_ProjectKB_Class20082]))
 
 ([CLSES_TAB] of  Widget
 
@@ -75,7 +75,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_330721_Class3] of  Map
+([KB_112563_Class3] of  Map
 )
 
 ([KB_724723_Class0] of  String
@@ -86,9 +86,9 @@
 ([KB_724723_Class1] of  Map
 
 	(entries
-		[Practica7_ProjectKB_Class20430]
-		[Practica7_ProjectKB_Class20431]
-		[Practica7_ProjectKB_Class20432]))
+		[Practica7_ProjectKB_Class20083]
+		[Practica7_ProjectKB_Class20084]
+		[Practica7_ProjectKB_Class20085]))
 
 ([KB_724723_Class100] of  String
 
@@ -413,7 +413,7 @@
 ([Practica7_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query")
-	(string_value "Query Name: 1-Strategy and short game\nMatch All:true\nLength: 2\nGame_short_duration	 	Other:	null	\nGame_strategy_cat	 	Other:	null	\n\nQuery Name: 2-less 50, short, hard and coop\nMatch All:true\nLength: 4\nGame	game_difficulty	contains	Other:hard	1	\nGame	game_duration	is less than	Other:60	1	\nGame	game_style	contains	Other:cooperative	1	\nGame	game_price	is less than	Other:50	1	\n\nQuery Name: Continent europe\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: 4-Diseñadores europeos rol\nMatch All:true\nLength: 3\nDesigner	 	Other:	null	\nDesigner	designer_location	contains	Query:Continent europe|Continent europe	1	\nDesigner	designer_category	is	Other:Rol	1	\n\nQuery Name: 6-Rol entre 10 y 14 años\nMatch All:true\nLength: 3\nGame	game_category	contains	Other:rol	1	\nGame	game_age	is greater than	Other:9	1	\nGame	game_age	is less than	Other:15	1	\n\nQuery Name: 3-CocktailGames sold in Madrid-NewYork\nMatch All:true\nLength: 1\nGame	game_store	contains	Query:Madrid or NewYork(aux)|Madrid or NewYork(aux)	1	\n\nQuery Name: Madrid or NewYork(aux)\nMatch All:false\nLength: 2\nStore	store_location	contains	Instance: | 	1	\nStore	store_location	contains	Instance: | 	1	\n\nQuery Name: 5-Tiendas con Puerto Rico\nMatch All:true\nLength: 1\nStore	store_games	contains	Instance: | 	1	\n\nQuery Name: European stores\nMatch All:true\nLength: 1\nStore	store_location	contains	Query:Continent europe|Continent europe	1	\n\nQuery Name: 7-Games holocubierta, sold in europe\nMatch All:true\nLength: 2\nGame	game_store	contains	Query:European stores|European stores	1	\nGame	game_manufacturer	contains	Instance:Practica7_Class10013|Holocubierta	1	\n\n"))
+	(string_value "Query Name: 1-Strategy and short game\nMatch All:true\nLength: 2\nGame_short_duration	 	Other:	null	\nGame_strategy_cat	 	Other:	null	\n\nQuery Name: 2-less 50, short, hard and coop\nMatch All:true\nLength: 4\nGame	game_difficulty	contains	Other:hard	1	\nGame	game_duration	is less than	Other:60	1	\nGame	game_style	contains	Other:cooperative	1	\nGame	game_price	is less than	Other:50	1	\n\nQuery Name: Continent europe\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: 4-Diseñadores europeos rol\nMatch All:true\nLength: 2\nDesigner	designer_location	contains	Query:Continent europe|Continent europe	1	\nDesigner	designer_category	contains	Other:rol	1	\n\nQuery Name: 6-Rol entre 10 y 14 años\nMatch All:true\nLength: 3\nGame	game_category	contains	Other:rol	1	\nGame	game_age	is greater than	Other:9	1	\nGame	game_age	is less than	Other:15	1	\n\nQuery Name: 3-CocktailGames sold in Madrid-NewYork\nMatch All:true\nLength: 2\nGame	game_store	contains	Query:Madrid or NewYork(aux)|Madrid or NewYork(aux)	1	\nGame	game_manufacturer	contains	Instance: | 	1	\n\nQuery Name: Madrid or NewYork(aux)\nMatch All:false\nLength: 2\nStore	store_location	contains	Instance: | 	1	\nStore	store_location	contains	Instance: | 	1	\n\nQuery Name: 5-Tiendas con Puerto Rico\nMatch All:true\nLength: 1\nStore	store_games	contains	Instance: | 	1	\n\nQuery Name: European stores\nMatch All:true\nLength: 1\nStore	store_location	contains	Query:Continent europe|Continent europe	1	\n\nQuery Name: 7-Games holocubierta, sold in europe\nMatch All:true\nLength: 2\nGame	game_store	contains	Query:European stores|European stores	1	\nGame	game_manufacturer	contains	Instance: | 	1	\n\n"))
 
 ([Practica7_ProjectKB_Class10101] of  Widget
 
@@ -987,81 +987,81 @@
 ([Practica7_ProjectKB_Class20] of  Property_List
 )
 
-([Practica7_ProjectKB_Class20418] of  String
-
-	(name "Location")
-	(string_value "location_city"))
-
-([Practica7_ProjectKB_Class20419] of  String
+([Practica7_ProjectKB_Class20071] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Practica7_ProjectKB_Class20420] of  String
+([Practica7_ProjectKB_Class20072] of  String
+
+	(name "Location")
+	(string_value "location_city"))
+
+([Practica7_ProjectKB_Class20073] of  String
 
 	(name "Game")
 	(string_value "game_name"))
 
-([Practica7_ProjectKB_Class20421] of  String
-
-	(name ":FUNCTION")
-	(string_value "%3ADEFINITION-NAME"))
-
-([Practica7_ProjectKB_Class20422] of  String
+([Practica7_ProjectKB_Class20074] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class20423] of  String
+([Practica7_ProjectKB_Class20075] of  String
 
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
+	(name ":FUNCTION")
+	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class20424] of  String
+([Practica7_ProjectKB_Class20076] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Practica7_ProjectKB_Class20425] of  String
+([Practica7_ProjectKB_Class20077] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([Practica7_ProjectKB_Class20078] of  String
 
 	(name "Manufacturer")
 	(string_value "manufacturer_name"))
 
-([Practica7_ProjectKB_Class20426] of  String
+([Practica7_ProjectKB_Class20079] of  String
 
 	(name "Store")
 	(string_value "store_name"))
 
-([Practica7_ProjectKB_Class20427] of  String
+([Practica7_ProjectKB_Class20080] of  String
 
 	(name "My_User")
 	(string_value "user_name"))
 
-([Practica7_ProjectKB_Class20428] of  String
-
-	(name ":JESS-DEFINITION")
-	(string_value "%3ADEFINITION-NAME"))
-
-([Practica7_ProjectKB_Class20429] of  String
+([Practica7_ProjectKB_Class20081] of  String
 
 	(name "Designer")
 	(string_value "designer_name"))
 
-([Practica7_ProjectKB_Class20430] of  Map_Entry
+([Practica7_ProjectKB_Class20082] of  String
+
+	(name ":JESS-DEFINITION")
+	(string_value "%3ADEFINITION-NAME"))
+
+([Practica7_ProjectKB_Class20083] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class20431] of  Map_Entry
+([Practica7_ProjectKB_Class20084] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class20432] of  Map_Entry
+([Practica7_ProjectKB_Class20085] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -1413,19 +1413,19 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[Practica7_ProjectKB_Class75]
+		[Practica7_ProjectKB_Class10130]
 		[Practica7_ProjectKB_Class10168]
+		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
+		[Practica7_ProjectKB_Class10147]
+		[STANDARD_CLASS_FORM_WIDGET]
 		[Practica7_ProjectKB_Class88]
 		[Practica7_ProjectKB_Class10004]
+		[Practica7_ProjectKB_Class10109]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[Practica7_ProjectKB_Class10189]
 		[STANDARD_SLOT_FORM_WIDGET]
-		[Practica7_ProjectKB_Class10210]
-		[Practica7_ProjectKB_Class10130]
-		[STANDARD_FACET_FORM_WIDGET]
-		[Practica7_ProjectKB_Class10147]
-		[STANDARD_CLASS_FORM_WIDGET]
-		[Practica7_ProjectKB_Class10109])
+		[Practica7_ProjectKB_Class10210])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
