@@ -1,4 +1,5 @@
 /* (batch "C:/hlocal/Lab-8-IA/gamesClassification.clp") */
+/* (batch "C:/Users/pegartillo/Desktop/Lab-8-IA/gamesClassification.clp") */
 (clear)
 
 (mapclass Designer)
@@ -220,17 +221,22 @@
 )
 
 (defrule recommend_games
-	(object (is-a My_User) (user_age ?age) (user_budget ?budget) (user_category_wanted ?category)(user_difficulty_wanted ?difficulty)
-	(user_name ?name)(user_style_wanted ?style)(user_time_to_play ?time) (user_duration_wanted ?duration)(user_recommendations $?rec) (OBJECT ?p))
+	(object (is-a My_User) (user_age ?u_age) (user_budget ?u_budget) (user_category_wanted ?u_category)(user_difficulty_wanted ?u_difficulty)
+	(user_name ?u_name)(user_style_wanted ?u_style)(user_duration_wanted ?u_duration)(user_recommendations $?rec) (OBJECT ?user))
 
-	(object (is-a Game) (game_age ?age_game) (game_category ?category) (game_difficulty ?difficulty) (game_duration ?duration_game)(game_name ?game_name) (game_price ?price_game) (game_style ?style)(OBJECT ?c))
+	(object (is-a Game) (game_age ?g_age) (game_category ?g_category) (game_difficulty ?g_difficulty) (game_duration ?g_duration)(game_name ?g_name) (game_price ?g_price) (game_style ?g_style)(OBJECT ?c))
 
-	(test (<= ?duration_game ?duration))
-	(test (<= ?price_game ?budget))
-	(test (<= ?age_game ?age))
-	(test (not (member$ ?game_name ?rec)))
+
+	(test (eq ?u_category ?g_category))
+	(test (eq ?u_difficulty ?g_difficulty))
+	(test (eq ?u_style ?g_style))
+	(test (<= ?g_age ?u_age))	
+	(test (<= ?g_price ?u_budget))
+	(test (<= ?g_duration ?u_duration))
+
+	(test (not (member$ ?g_name ?rec)))
 	=>
-	(slot-insert$ ?p user_recommendations 1 ?game_name)
+	(slot-insert$ ?user user_recommendations 1 ?g_name)
 )
 
 (mapclass :THING)

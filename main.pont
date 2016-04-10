@@ -1,5 +1,5 @@
-; Fri Apr 08 20:55:36 CEST 2016
-;
+; Sun Apr 10 15:48:35 CEST 2016
+; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -10,6 +10,10 @@
 	(single-slot location_city
 		(type STRING)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Practica7_Class20040
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Name
 		(type STRING)
@@ -44,8 +48,9 @@
 		(type INSTANCE)
 ;+		(allowed-classes Game)
 		(create-accessor read-write))
-	(multislot user_duration_wanted
+	(single-slot user_duration_wanted
 		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_style_wanted
 		(type STRING)
@@ -482,15 +487,12 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot user_duration_wanted
+	(single-slot user_duration_wanted
 		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_name
 		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot user_time_to_play
-		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot user_category_wanted
@@ -550,3 +552,7 @@
 		(type INSTANCE)
 ;+		(allowed-classes Game)
 		(create-accessor read-write)))
+
+(defclass %3AUNDEFINED
+	(is-a USER)
+	(role concrete))
