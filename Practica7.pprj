@@ -1,4 +1,4 @@
-; Sun Apr 10 15:48:35 CEST 2016
+; Sun Apr 10 18:22:19 CEST 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,18 +20,18 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Practica7_ProjectKB_Class30284]
-		[Practica7_ProjectKB_Class30285]
-		[Practica7_ProjectKB_Class30286]
-		[Practica7_ProjectKB_Class30287]
-		[Practica7_ProjectKB_Class30288]
-		[Practica7_ProjectKB_Class30289]
-		[Practica7_ProjectKB_Class30290]
-		[Practica7_ProjectKB_Class30291]
-		[Practica7_ProjectKB_Class30292]
-		[Practica7_ProjectKB_Class30293]
-		[Practica7_ProjectKB_Class30294]
-		[Practica7_ProjectKB_Class30295]))
+		[Practica7_ProjectKB_Class30611]
+		[Practica7_ProjectKB_Class30612]
+		[Practica7_ProjectKB_Class30613]
+		[Practica7_ProjectKB_Class30614]
+		[Practica7_ProjectKB_Class30615]
+		[Practica7_ProjectKB_Class30616]
+		[Practica7_ProjectKB_Class30617]
+		[Practica7_ProjectKB_Class30618]
+		[Practica7_ProjectKB_Class30619]
+		[Practica7_ProjectKB_Class30620]
+		[Practica7_ProjectKB_Class30621]
+		[Practica7_ProjectKB_Class30622]))
 
 ([CLSES_TAB] of  Widget
 
@@ -86,9 +86,9 @@
 ([KB_724723_Class1] of  Map
 
 	(entries
-		[Practica7_ProjectKB_Class30296]
-		[Practica7_ProjectKB_Class30297]
-		[Practica7_ProjectKB_Class30298]))
+		[Practica7_ProjectKB_Class30623]
+		[Practica7_ProjectKB_Class30624]
+		[Practica7_ProjectKB_Class30625]))
 
 ([KB_724723_Class100] of  String
 
@@ -363,7 +363,7 @@
 	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
 	(width 200)
 	(x 0)
-	(y 120))
+	(y 0))
 
 ([Practica7_ProjectKB_Class10016] of  Property_List
 )
@@ -377,7 +377,7 @@
 	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
 	(width 200)
 	(x 0)
-	(y 0))
+	(y 130))
 
 ([Practica7_ProjectKB_Class10020] of  Property_List
 )
@@ -399,7 +399,7 @@
 ([Practica7_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query")
-	(string_value "Query Name: 1-Strategy and short game\nMatch All:true\nLength: 2\nGame	game_category	contains	Other:strategy	1	\nGame	game_duration	is less than	Other:61	1	\n\nQuery Name: 2-less 50, short, hard and coop\nMatch All:true\nLength: 4\nGame	game_difficulty	contains	Other:hard	1	\nGame	game_duration	is less than	Other:60	1	\nGame	game_style	contains	Other:cooperative	1	\nGame	game_price	is less than	Other:50	1	\n\nQuery Name: Continent europe\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: 6-Rol entre 10 y 14 años\nMatch All:true\nLength: 3\nGame	game_category	contains	Other:rol	1	\nGame	game_age	is greater than	Other:9	1	\nGame	game_age	is less than	Other:15	1	\n\nQuery Name: 3-CocktailGames sold in Madrid o NewYork\nMatch All:true\nLength: 1\nGame	game_store	contains	Query:Stores Madrid USA|Stores Madrid USA	1	\n\nQuery Name: Madrid orUSA(aux)\nMatch All:false\nLength: 2\nLocation	location_city	contains	Other:Madrid	1	\nLocation	location_country	contains	Other:USA	1	\n\nQuery Name: 5-Tiendas con Puerto Rico\nMatch All:true\nLength: 1\nStore	store_games	contains	Query:Juego Puerto Rico|Juego Puerto Rico	1	\n\nQuery Name: European stores\nMatch All:true\nLength: 1\nStore	store_location	contains	Query:Continent europe|Continent europe	1	\n\nQuery Name: 7-Games holocubierta, sold in europe\nMatch All:true\nLength: 2\nGame	game_store	contains	Query:European stores|European stores	1	\nGame	game_manufacturer	contains	Query:Holocubiera manufacturer|Holocubiera manufacturer	1	\n\nQuery Name: Stores Madrid USA\nMatch All:true\nLength: 1\nStore	store_location	contains	Query:Madrid orUSA(aux)|Madrid orUSA(aux)	1	\n\nQuery Name: 4-Designer from europe and role\nMatch All:true\nLength: 1\nDesigner	designer_location	contains	Query:Europe location|Europe location	1	\n\nQuery Name: Europe location\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: Juego Puerto Rico\nMatch All:true\nLength: 1\nGame	game_name	contains	Other:Puerto Rico	1	\n\nQuery Name: Holocubiera manufacturer\nMatch All:true\nLength: 1\nManufacturer	manufacturer_name	contains	Other:Holocubierta	1	\n\n"))
+	(string_value "Query Name: 1-consulta 1\nMatch All:true\nLength: 2\nGame	game_category	contains	Other:strategy	1	\nGame	game_duration	is less than	Other:61	1	\n\nQuery Name: 2-consulta 2\nMatch All:true\nLength: 4\nGame	game_difficulty	contains	Other:hard	1	\nGame	game_duration	is less than	Other:61	1	\nGame	game_style	contains	Other:cooperative	1	\nGame	game_price	is less than	Other:50	1	\n\nQuery Name: Continent europe\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: 6-consulta 6\nMatch All:true\nLength: 3\nGame	game_category	contains	Other:rol	1	\nGame	game_age	is greater than	Other:9	1	\nGame	game_age	is less than	Other:15	1	\n\nQuery Name: 3-consulta 3\nMatch All:true\nLength: 1\nGame	game_store	contains	Query:Stores Madrid USA|Stores Madrid USA	1	\n\nQuery Name: Madrid orUSA(aux)\nMatch All:false\nLength: 2\nLocation	location_city	contains	Other:Madrid	1	\nLocation	location_country	contains	Other:USA	1	\n\nQuery Name: 5-consulta 5\nMatch All:true\nLength: 1\nStore	store_games	contains	Query:Juego Puerto Rico|Juego Puerto Rico	1	\n\nQuery Name: European stores\nMatch All:true\nLength: 1\nStore	store_location	contains	Query:Continent europe|Continent europe	1	\n\nQuery Name: 7-consulta 7\nMatch All:true\nLength: 2\nGame	game_store	contains	Query:European stores|European stores	1	\nGame	game_manufacturer	contains	Query:Holocubiera manufacturer|Holocubiera manufacturer	1	\n\nQuery Name: Stores Madrid USA\nMatch All:true\nLength: 1\nStore	store_location	contains	Query:Madrid orUSA(aux)|Madrid orUSA(aux)	1	\n\nQuery Name: 4-consulta 4\nMatch All:true\nLength: 2\nDesigner	designer_location	contains	Query:Europe location|Europe location	1	\nDesigner	designer_category	contains	Other:rol	1	\n\nQuery Name: Europe location\nMatch All:true\nLength: 1\nLocation	location_continent	contains	Other:Europe	1	\n\nQuery Name: Juego Puerto Rico\nMatch All:true\nLength: 1\nGame	game_name	contains	Other:Puerto Rico	1	\n\nQuery Name: Holocubierta manufacturer\nMatch All:true\nLength: 1\nManufacturer	manufacturer_name	contains	Other:Holocubierta	1	\n\nQuery Name: Games made by HOlocubierta\nMatch All:true\nLength: 1\nGame	game_manufacturer	contains	Query:Holocubierta manufacturer|Holocubierta manufacturer	1	\n\n"))
 
 ([Practica7_ProjectKB_Class10101] of  Widget
 
@@ -1038,81 +1038,81 @@
 ([Practica7_ProjectKB_Class30] of  Property_List
 )
 
-([Practica7_ProjectKB_Class30284] of  String
+([Practica7_ProjectKB_Class30611] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([Practica7_ProjectKB_Class30285] of  String
+([Practica7_ProjectKB_Class30612] of  String
 
 	(name "Location")
 	(string_value "location_city"))
 
-([Practica7_ProjectKB_Class30286] of  String
+([Practica7_ProjectKB_Class30613] of  String
 
 	(name "Game")
 	(string_value "game_name"))
 
-([Practica7_ProjectKB_Class30287] of  String
+([Practica7_ProjectKB_Class30614] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class30288] of  String
+([Practica7_ProjectKB_Class30615] of  String
 
 	(name ":FUNCTION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class30289] of  String
+([Practica7_ProjectKB_Class30616] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([Practica7_ProjectKB_Class30290] of  String
+([Practica7_ProjectKB_Class30617] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([Practica7_ProjectKB_Class30291] of  String
+([Practica7_ProjectKB_Class30618] of  String
 
 	(name "Manufacturer")
 	(string_value "manufacturer_name"))
 
-([Practica7_ProjectKB_Class30292] of  String
+([Practica7_ProjectKB_Class30619] of  String
 
 	(name "Store")
 	(string_value "store_name"))
 
-([Practica7_ProjectKB_Class30293] of  String
+([Practica7_ProjectKB_Class30620] of  String
 
 	(name "My_User")
 	(string_value "user_name"))
 
-([Practica7_ProjectKB_Class30294] of  String
+([Practica7_ProjectKB_Class30621] of  String
 
 	(name "Designer")
 	(string_value "designer_name"))
 
-([Practica7_ProjectKB_Class30295] of  String
+([Practica7_ProjectKB_Class30622] of  String
 
 	(name ":JESS-DEFINITION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([Practica7_ProjectKB_Class30296] of  Map_Entry
+([Practica7_ProjectKB_Class30623] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class30297] of  Map_Entry
+([Practica7_ProjectKB_Class30624] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([Practica7_ProjectKB_Class30298] of  Map_Entry
+([Practica7_ProjectKB_Class30625] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
@@ -1413,19 +1413,19 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[Practica7_ProjectKB_Class75]
-		[Practica7_ProjectKB_Class10130]
 		[Practica7_ProjectKB_Class10168]
-		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[Practica7_ProjectKB_Class10147]
-		[STANDARD_CLASS_FORM_WIDGET]
 		[Practica7_ProjectKB_Class88]
 		[Practica7_ProjectKB_Class10004]
-		[Practica7_ProjectKB_Class10109]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[Practica7_ProjectKB_Class10189]
+		[STANDARD_SLOT_FORM_WIDGET]
 		[Practica7_ProjectKB_Class10210]
-		[STANDARD_SLOT_FORM_WIDGET])
+		[Practica7_ProjectKB_Class10130]
+		[STANDARD_FACET_FORM_WIDGET]
+		[Practica7_ProjectKB_Class10147]
+		[STANDARD_CLASS_FORM_WIDGET]
+		[Practica7_ProjectKB_Class10109])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

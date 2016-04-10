@@ -103,7 +103,7 @@
 		(game_duration 30)
 		(game_manufacturer "CocktailGames")
 		(game_name "Go Game")
-		(game_price 60.0)
+		(game_price 10.0)
 		(game_style "single")
 		(stores "Game")
 	)
